@@ -6,7 +6,7 @@ public class TripleStep {
 	static int[] step ;
 		
 	public static void main(String[] args) {
-		int n=5;
+		int n=33;
 		step = new int[n];
 		step[0] = 1;
 		step[1] = 2;
