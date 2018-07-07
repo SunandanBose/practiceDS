@@ -6,11 +6,11 @@ larger disk cannot be on top of smaller disk
 
 
 
-   						 1
-   					 	 2
-   						 3
-   						 4
-   						 5
+    		   				 
+   			   			   
+    		   	1   		   	  
+    		    2	              
+   4            5		   3
 stack1  	stack2		stack 3
 
 

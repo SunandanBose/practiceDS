@@ -1,14 +1,6 @@
-Magic Index: A magic index in an array A[e... n-1] is defined to be an index 
-such that A[ i] = i. Given a sorted array of distinct integers, write a method 
-to find a magic index, if one exists, in array A.
+package com.sunandan.permutation;
 
-What if the values are not distinct?
-
-package com;
-
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class Permutation
@@ -18,7 +10,6 @@ public class Permutation
 	
     public static void main(String[] args)
     {
-       /* long startTime =  System.nanoTime();*/
     	
     	String str = "ABC";
         String str1 = "BCA";
@@ -33,8 +24,6 @@ public class Permutation
         	System.out.println("2nd String is a permutation");
         	
         }
-        /*long endTime =  System.nanoTime();
-        System.out.println(endTime- startTime);*/
         
     }
     private void permute(String str, int l, int r)
