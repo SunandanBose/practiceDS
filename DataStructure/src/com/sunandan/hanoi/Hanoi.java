@@ -17,7 +17,7 @@ public class Hanoi {
 		while(true) {
 			if(stack_1.isEmpty() && stack_2.isEmpty()) {
 				System.out.println("Hanoi complete!!! Number of steps Taken : " +count);
-				display(stack_3);
+				stack_3.forEach(i -> System.out.println(i));
 				return;
 			}
 			if(stackList.get(indx%3).isEmpty()) {
@@ -41,13 +41,9 @@ public class Hanoi {
 		
 
 	}
-
+/*
 	private static void display(Stack<Integer> stack) {
-		if (stack.size() < 1) {
-			return;
-		}
-	    System.out.println(stack.pop()+" ");
-		display(stack);
-	}
+		stack.forEach(i -> System.out.println(i));
+	}*/
 
 }
