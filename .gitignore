@@ -24,3 +24,6 @@ hs_err_pid*
 /.metadata/
 .recommenders
 RemoteSystemsTempFiles
+
+# PyCharm
+DataStructure/src/com/raj/.idea
