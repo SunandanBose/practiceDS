@@ -13,6 +13,8 @@ public class Hanoi {
 			stack_1.push(i);
 		}
 		List<Stack<Integer>> stackList =Arrays.asList(stack_1,stack_2,stack_3);
+		System.out.println(recursiveApproach(6));
+		
 		int indx = 0,count = 0;
 		while(true) {
 			if(stack_1.isEmpty() && stack_2.isEmpty()) {
@@ -45,5 +47,14 @@ public class Hanoi {
 	private static void display(Stack<Integer> stack) {
 		stack.forEach(i -> System.out.println(i));
 	}*/
+
+	private static int recursiveApproach(int n) {
+		if((n==0)||(n==1))
+			return n;
+		else 
+			return (recursiveApproach(n-1)*2)+1;
+		
+		
+	}
 
 }

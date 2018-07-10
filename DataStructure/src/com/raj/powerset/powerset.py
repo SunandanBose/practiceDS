@@ -11,4 +11,4 @@ def powerset(inputSet):
 
 	return resultSet
 
-print powerset(inputSet)
+print (powerset(inputSet))
