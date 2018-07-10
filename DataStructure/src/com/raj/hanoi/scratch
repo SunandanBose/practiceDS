@@ -1,4 +1,3 @@
-
 3 Stack
 1 disk move
 larger disk cannot be on top of smaller disk
@@ -19,39 +18,3 @@ move right from current stack
 check if possible -> move -> top to right 
 if not possible -> next stack
 when stack1 and stack 2 are empty
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
