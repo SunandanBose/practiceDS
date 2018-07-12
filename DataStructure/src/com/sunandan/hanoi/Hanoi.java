@@ -13,7 +13,7 @@ public class Hanoi {
 			stack_1.push(i);
 		}
 		List<Stack<Integer>> stackList =Arrays.asList(stack_1,stack_2,stack_3);
-		System.out.println(recursiveApproach(6));
+		System.out.println(recursiveApproach(4));
 		
 		int indx = 0,count = 0;
 		while(true) {

@@ -1,0 +1,46 @@
+ACB
+ACB
+BAC
+BCA
+CAB
+CBA
+
+ABCD
+ABDC
+ACBD
+ACDB
+ADBC
+ADCB
+BACD
+
+ABC    BAC   CBA
+ACB    BCA   CAB
+
+
+ABCD
+ABCD
+ABDC
+ACBD
+ACDB
+ADCB
+ADBC
+
+
+
+permutation(str, initial, str.length-1)
+if(initial > last)
+	return;
+
+permute(str, initial, last-1)
+str=swap(initial, last-1);
+permute(str, initial+1, last-1)
+
+
+
+
+
+
+
+
+
+
