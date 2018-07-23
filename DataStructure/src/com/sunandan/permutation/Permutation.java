@@ -7,19 +7,24 @@ import java.util.Set;
 
 public class Permutation
 {
-	static Set<String> permutationString = new HashSet<>();
+	static List<String> permutationString = new ArrayList<>();
 	
     public static void main(String[] args)
     {
     	
     	String str = "ABC";
         new Permutation().permute(str, 0, str.length()-1);
+        System.out.println(permutationString.size());
         permutationString.forEach(System.out::println);
         
     }
     private void permute(String str, int initial, int last)
     {
-        if(initial>last)
+        if(initial == 0 && last ==0) { 
+        	permutationString.add(str);
+        	permute(str,initial+1,str.length()-1);
+        }
+    	if(initial==last)
         	return;
         permute(str,initial,last-1);
         str = swap(str,initial,last);
