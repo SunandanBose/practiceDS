@@ -16,6 +16,8 @@ public class Test {
 		mergedList.forEach(System.out::println);
 	}
 
+
+	
 	private static List<Integer> mergeList(List<Integer> list_1, List<Integer> list_2) {
 		int c1 = 0, c2 = 0;
 	    List<Integer> mergedList = new ArrayList<Integer>();
