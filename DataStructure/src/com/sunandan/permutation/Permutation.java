@@ -27,8 +27,11 @@ public class Permutation
     	if(initial==last)
         	return;
         permute(str,initial,last-1);
-        str = swap(str,initial,last);
-        permutationString.add(str);
+        if(str.charAt(initial) != str.charAt(last)){
+            str = swap(str,initial,last);
+            if(!permutationString.contains(str))
+                permutationString.add(str);
+        }
         permute(str,initial+1,str.length()-1);
     }
 
