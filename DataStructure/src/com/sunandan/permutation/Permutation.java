@@ -12,7 +12,7 @@ public class Permutation
     public static void main(String[] args)
     {
     	
-    	String str = "ABC";
+    	String str = "ABCDE";
         new Permutation().permute(str, 0, str.length()-1);
         System.out.println(permutationString.size());
         permutationString.forEach(System.out::println);
