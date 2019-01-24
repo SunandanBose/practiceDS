@@ -18,15 +18,33 @@ public class AVLTreeBalancing {
 		int lhs = height(root.left);
 		int rhs = height(root.right);
 
+		if(!Math.abs(lhs-rhs)<=1)
+			balanceNode(root)
 
 		if(Math.abs(lhs-rhs)<=1 && isBalanced(root.left) && isBalanced(root.right))
 			return true;
 		return false;
 	}
 
-	private void balanceTree(Node root){
+	private Node balanceNode(Node root){
 
 		int balance = height(root.left) - height(root.right);
+		if(balance > 1){
+			if( height(root.left.left) > height(root.left.right)){
+				return rightRotate(root.left);
+			}
+			if( height(root.left.left) < height(root.left.right)){
+				return rightRotate(leftRotate(root.left));
+			}
+		}
+		if(balance < -1){
+			if( height(root.left.left) < height(root.left.right)){
+				return leftRotate(root.left);
+			}
+			if( height(root.left.left) > height(root.left.right)){
+				return leftRotate(rightRotate(root.left));
+			}
+		}
 	}
 
 	/*
@@ -52,12 +70,7 @@ public class AVLTreeBalancing {
      			T3 will be the root z will be the right child of T3 and the right child of T3 will be the left child of z
      		left rotate:
      		 	T3 will be the root y will be the left child of T3 and the left child of T3 will be the right child of y
-
 	 */
-
-
-
-
 	private Node rightRotate(Node y) {
         Node x = y.left;
         Node T2 = x.right;
@@ -127,4 +140,3 @@ class Node{
 		this.right=null;
 	}
 }
-
