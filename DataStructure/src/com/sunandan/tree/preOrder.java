@@ -15,7 +15,11 @@ class Node {
         right = null;
     }
 }
-
+/*
+Inorder (Left, Root, Right)
+Preorder (Root, Left, Right)
+Postorder (Left, Right, Root)
+*/
 class preOrder {
 	public static void getPreOrder(Node root) {
         if(root == null) return;
