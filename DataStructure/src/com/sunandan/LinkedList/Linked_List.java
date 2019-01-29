@@ -5,8 +5,6 @@ class Node{
 	Node(int data){
 	    this.data = data;
 	}
-	
-	//public Node previous;
 }
 
 public class Linked_List{
