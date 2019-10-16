@@ -2,10 +2,10 @@ import java.util.*;
 class Sort {
     public void bubble(List<Integer> list) {
         // Pick one element. Compare it with every other element and swap the positions
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < i; j++) {
-                if (list.get(i) < list.get(j)){
-                    swap(list, i, j);
+        for (int i = 0; i < list.size()-1; i++) {
+            for (int j = 0; j < list.size()-i-1; j++) {
+                if (list.get(j) > list.get(j+1)){
+                    swap(list, j+1, j);
                 }
             }
         }
