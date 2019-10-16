@@ -10,6 +10,20 @@ class Sort {
             }
         }
     }
+    public void insertion(LinkedList<Integer> list1) {
+	    
+        for(int i=1; i<list1.size(); i++){
+            for(int j=0;j<=i-1;j++){
+                if(list1.get(i)<list1.get(j)){
+                    //insert at index of j
+                    list1.add(j,list.get(i));
+                    list1.remove(i+1);
+                    break;
+                }
+            }
+        }
+    }
+
 
     private void swap(List<Integer> list, int i,  int j){
         int temp;
@@ -23,5 +37,9 @@ class Sort {
         List list = Arrays.asList(12, 2,1,3, 12);
         sorter.bubble(list);
         System.out.print(list);
+        LinkedList<Integer> list1 = new LinkedList<Integer>();
+        list1.addAll(Arrays.asList(12,2,1,3));
+        sorter.insertion(list1);
+        System.out.print(list1);
     }
 }
