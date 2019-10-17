@@ -1,7 +1,6 @@
 import java.util.*;
 class Sort {
     public void bubble(List<Integer> list) {
-        // Pick one element. Compare it with every other element and swap the positions
         for (int i = 0; i < list.size()-1; i++) {
             for (int j = 0; j < list.size()-i-1; j++) {
                 if (list.get(j) > list.get(j+1)){
@@ -10,14 +9,18 @@ class Sort {
             }
         }
     }
-    public void insertion(LinkedList<Integer> list1) {
-	    
-        for(int i=1; i<list1.size(); i++){
+
+    public void insertion(LinkedList<Integer> list) {
+        // Run loop from 1 to n
+        for(int i=1; i < list.size(); i++){
+            // Run loop from 0 to i - 1
             for(int j=0;j<=i-1;j++){
-                if(list1.get(i)<list1.get(j)){
-                    //insert at index of j
-                    list1.add(j,list1.get(i));
-                    list1.remove(i+1);
+                // if selected element is less than any element in the inside loop
+                if(list.get(i) < list.get(j)){
+                    //insert at index of the element that is greater
+                    list.add(j, list.get(i));
+                    // remove element from original position
+                    list.remove(i+1);
                     break;
                 }
             }
