@@ -16,7 +16,7 @@ class Sort {
             for(int j=0;j<=i-1;j++){
                 if(list1.get(i)<list1.get(j)){
                     //insert at index of j
-                    list1.add(j,list.get(i));
+                    list1.add(j,list1.get(i));
                     list1.remove(i+1);
                     break;
                 }
@@ -36,10 +36,10 @@ class Sort {
         Sort sorter = new Sort();
         List list = Arrays.asList(12, 2,1,3, 12);
         sorter.bubble(list);
-        System.out.print(list);
+        System.out.println("Bubble Sort Result : "+list);
         LinkedList<Integer> list1 = new LinkedList<Integer>();
         list1.addAll(Arrays.asList(12,2,1,3));
         sorter.insertion(list1);
-        System.out.print(list1);
+        System.out.println("Insertion Sort Result : "+list1);
     }
 }
