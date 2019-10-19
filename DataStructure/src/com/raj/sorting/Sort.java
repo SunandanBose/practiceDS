@@ -34,12 +34,29 @@ class Sort {
 	    List<Integer> mergedList = new ArrayList<Integer>();
 	    while(c1 < list_1.size() || c2 < list_2.size()) {
 	    	if(c2 < list_2.size())
-	        	mergedList.add((Integer) list_2.get(c2++));
+	        	insertElementInArray(mergedList,list_2.get(c2++));
 	    	if(c1 < list_1.size())
-	        	mergedList.add((Integer) list_1.get(c1++));
+	        	insertElementInArray(mergedList,list_1.get(c1++));
 	    }
 	    return mergedList;
 	}
+    
+    private void insertElementInArray(List<Integer> list, Integer value_to_insert){
+        if(list.isEmpty()){
+            list.add(value_to_insert);
+            return;
+        }
+        if(list.get(0)>value_to_insert){
+                list.add(0,value_to_insert);
+                return;
+        }
+        for(int i=list.size()-1;i>=0;i--){
+            if(list.get(i)<value_to_insert){
+                list.add(i+1,value_to_insert);
+                return;
+            }
+        }
+    }
 
     private void swap(List<Integer> list, int i,  int j){
         int temp;
@@ -57,5 +74,9 @@ class Sort {
         list1.addAll(Arrays.asList(12,2,1,3));
         sorter.insertion(list1);
         System.out.println("Insertion Sort Result : "+list1);
+        List list3 = Arrays.asList(12, 2,1,3, 9);
+        List list4 = Arrays.asList(13, 4,5,39, 11);
+        //sorter.merge(list3,list4);
+        System.out.println("Merge Sort Result : "+sorter.merge(list3,list4));
     }
 }
