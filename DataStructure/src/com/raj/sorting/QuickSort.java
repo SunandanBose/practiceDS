@@ -9,17 +9,17 @@ class QuickSort{
 		new QuickSort().quickSort(list,0,list.size());
 		System.out.println(list);
 	}
-	private void quickSort(List<Integer> list, int initial, int last){
-			if(initial>=last) return;
-			int pivot = list.get(initial);
-			int pivot_index = initial;
-			for(int i = initial+1;i< last ; i++){
+	private void quickSort(List<Integer> list, int firstElementIndex, int lastElementIndex){
+			if(firstElementIndex>=lastElementIndex) return;
+			int pivot = list.get(firstElementIndex);
+			int pivot_index = firstElementIndex;
+			for(int i = firstElementIndex+1;i< lastElementIndex ; i++){
 				if(list.get(i)<pivot){
 					list.add(pivot_index++,list.remove(i));
 				}
 			}
-			System.out.println(list);
-			quickSort(list,initial,pivot_index);
-			quickSort(list,pivot_index+1,last);
+		
+			quickSort(list,firstElementIndex,pivot_index);
+			quickSort(list,pivot_index+1,lastElementIndex);
 	}
 }
