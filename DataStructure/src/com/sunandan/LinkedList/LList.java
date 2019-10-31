@@ -57,6 +57,28 @@ class LList{
 			return head;
 	    }
 
+	    private static Node removeDuplicateElementsWithoutBuffer(Node node){
+	    	Node tempNode=node,previousNode=null;
+	    	Set<Integer> tempSetToCheckDuplicates = new HashSet<Integer>();
+	    	while(tempNode!=null){
+	    		if(tempSetToCheckDuplicates.contains(tempNode.data)){
+	    			tempNode = deleteNodeFromLinkedList(previousNode,tempNode);
+	    		}
+	    		else{
+	    			tempSetToCheckDuplicates.add(tempNode.data);
+	    		}
+	    		previousNode=tempNode;
+	    		tempNode=tempNode.next;
+	    	}
+	    	return node;
+	    }
+
+	    private static Node deleteNodeFromLinkedList(Node previousNode, Node nodeToRemove){
+	    	previousNode.next= nodeToRemove.next;
+	    	return previousNode;
+
+	    }
+
 		public static void main(String[] args) {
 		Node head =  insert();
 		print(head);
@@ -66,6 +88,11 @@ class LList{
 
 		//write a function to check if a linkedList is Palindrome or not
 		System.out.println("Palindrome linkedList: "+palindromeCheck(head));
+
+		//remove duplicate elements in a linkedlist with buffer
+		Node startNodeOfDistinctList = removeDuplicateElementsWithoutBuffer(head);
+		print(startNodeOfDistinctList);
+
 				
 
     }
