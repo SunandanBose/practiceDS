@@ -65,6 +65,10 @@ class Sort {
         list.set(j, temp);
     }
 
+    private static Queue<Integer> sortQueue(Queue<Integer> unsortedQueue){
+        
+    } 
+
     public static void main(String[] args) {
         Sort sorter = new Sort();
         List list = Arrays.asList(12, 2,1,3, 12);
@@ -78,5 +82,9 @@ class Sort {
         List list4 = Arrays.asList(13, 4,5,39, 11);
         //sorter.merge(list3,list4);
         System.out.println("Merge Sort Result : "+sorter.merge(list3,list4));
+
+        Queue<Integer> unsortedQueue = new LinkedList<>(Arrays.asList(12, 2,1,3, 12));
+        sortQueue(unsortedQueue);
+
     }
 }
