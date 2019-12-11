@@ -109,7 +109,7 @@ class LList{
 		print(startNodeOfDistinctList);
 
 		//remove duplicate elements in a linkedlist without buffer
-		head= insert(Arrays.asList(2,3,4,3,2,5));
+		head= insert(Arrays.asList(20,3,4,3,2,5));
 		System.out.println();
 		System.out.println("remove duplicate elements in a linkedlist without buffer");
 		startNodeOfDistinctList = removeDuplicateElementsWithoutBuffer(head);
