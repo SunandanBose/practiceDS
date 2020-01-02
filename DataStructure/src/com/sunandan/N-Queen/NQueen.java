@@ -6,7 +6,7 @@ public class NQueen
 		int n = 4;
 		boolean flag = false;
 		int[][] board = new int[n][n];
-		placeNQueen(n,board);
+		placeNQueen(n,0,0,board);
 		print(board);
 	}
 	private static void print(int[][] board){
@@ -17,21 +17,19 @@ public class NQueen
 		}
 	}
 
-	private static boolean placeNQueen(int n, int[][] board){
+	private static boolean placeNQueen(int n,int _indexi,int  _indexj, int[][] board){
 
 	    if(n==0)
 			return true;
 		for(int i=0;i<board.length;i++){
 			for(int j=0;j<board.length;j++){
-				if(board[i][j] != 1){
+				if(check(i,j,board) && (board[i][j] != 1)){
 					board[i][j] = 1;
-					if(check(i,j,board)){ 
-						placeNQueen(n--,board);
+					if(placeNQueen(n-1,0,0,board)){
+						return true;
 					}
-					else{
-						board[i][j]=0;
-					}
-				}	
+					board[i][j] = 0;
+				}
 			}
 		}
 		return false;
@@ -53,7 +51,7 @@ public class NQueen
 	        if(board[i][_indexj] == 1 ) verticalalCount ++;
 	        if(board[_indexi][i] == 1 ) horizontalCount ++;
 	    }
-	    if(verticalalCount <= 1 && horizontalCount <= 1) return true;
+	    if(verticalalCount < 1 && horizontalCount < 1) return true;
 	    else return false;
 	}
 	
