@@ -11,38 +11,26 @@ import java.util.*;
  	public static void main(String args[]){
 
  		List<Integer> coinDeminations = Arrays.asList(1,2,3);
- 		List<List<Integer>> result = getDenomination(new ArrayList<>(),coinDeminations, 4);
- 		result.forEach(i -> {
- 			i.forEach(j -> System.out.print(j));
- 			System.out.println();
- 		});
+ 		getDenomination(new ArrayList<>(),coinDeminations, 4);
 
  	}
   
- 	private static List<List<Integer>> getDenomination(List<Integer> resultSet, List<Integer> coinDeminations, int finalCoinAmount){
- 		List<List<Integer>> result1 =  new ArrayList<>();;
+ 	private static void getDenomination(List<Integer> resultSet, List<Integer> coinDeminations, int finalCoinAmount){
  		int sum = resultSet.stream().reduce(0, (a, b) -> a + b);
- 		
  		if( sum == finalCoinAmount){
  			resultSet.forEach(System.out::print);
  			System.out.println();
- 			List<List<Integer>> result = new ArrayList<>();
- 			//new ArrayList<List<Integer>>().add(e);
- 			if(!resultSet.isEmpty()) result.addAll(result1);
- 			result.add(resultSet);
- 			return result;
+ 			return;
  		}
  		for(Integer i : coinDeminations) {
  			sum = resultSet.stream().reduce(0, (a, b) -> a + b);
  			List<Integer> temp = new ArrayList<>(resultSet);
  			if(sum + i <= finalCoinAmount){
  				temp.add(i);
- 				//result1 =  new ArrayList<>();
- 				result1 = getDenomination(temp,coinDeminations,finalCoinAmount);
+ 				getDenomination(temp,coinDeminations,finalCoinAmount);
  			}
  		}
- 		return result1;
- 		
+ 		return;
  	}
 
  }
