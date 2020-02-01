@@ -1,15 +1,16 @@
 
+
 // TODO: Make the keys to accept other types. Same for the values.
 // TODO: Propetries of a good hash function
 
 
 class MyHashMap{
 
-	private int DEFAULT_BUCKET_COUNT = 16;
+	private int DEFAULT_BUCKET_COUNT_CAPACITY = 16;
 	private Node[] buckets;
 
 	public MyHashMap(){
-		buckets = new Node[DEFAULT_BUCKET_COUNT];
+		buckets = new Node[DEFAULT_BUCKET_COUNT_CAPACITY];
 	}
 
 	public MyHashMap(int capacity){
@@ -17,7 +18,7 @@ class MyHashMap{
 	}
 
 
-	public String get(String key){
+	public Object get(Object key){
 		int bucketIndex = hashCode(key);
 		Node n = buckets[bucketIndex];
 		while(n!=null){
@@ -28,7 +29,7 @@ class MyHashMap{
 		return null;
 	}
 
-	public void put(String key, String value){
+	public void put(Object key, Object value){
 		int bucketIndex = hashCode(key);
 		Node n = buckets[bucketIndex];
 		if(n != null){
@@ -53,33 +54,33 @@ class MyHashMap{
 
 	}
 
-	private int hashCode(String key){
-		return ((int)key.charAt(0))%buckets.length;
+	private int hashCode(Object key){
+		return (3^(key.hashCode()>>>3))%16;
 	}
 
 }
 
-class Node{
+class Node<K,V>{
 
-	private final String key;
-	private String value;
-	private Node next;
+	private final K key;
+	private V value;
+	private Node<K,V> next;
 
 
-	public Node(String key, String value) {
+	public Node(K key, V value) {
 		this.key = key;
 		this.value = value;
 	}
 
-	public String getKey() {
+	public K getKey() {
 		return key;
 	}
 
-	public String getValue() {
+	public V getValue() {
 		return value;
 	}
 
-	public void setValue(String value) {
+	public void setValue(V value) {
 		this.value = value;
 	}
 
