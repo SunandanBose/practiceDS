@@ -1,4 +1,6 @@
 /.metadata/
 /.recommenders/
 **/**.class
-
+*.class
+.DS_Store
+**/.DS_Store
