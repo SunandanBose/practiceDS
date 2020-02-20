@@ -55,12 +55,13 @@ class MyHashMap{
 	}
 
 	private int hashCode(Object key){
-		return (3^(key.hashCode()>>>3))%16;
+		return (3^(key.hashCode()))%16;
 	}
 
 }
 
 class Node<K,V>{
+
 
 	private final K key;
 	private V value;
