@@ -1,7 +1,7 @@
-class CompareTree{
+class CompareTree<T>{
 
     public static void main(String[] args) {
-        CompareTree c = new CompareTree();
+        CompareTree<Integer> c = new CompareTree<Integer>();
         int[] arr = {1,2,3,4,5,6,7};
         Node<Integer> root_tree1=c.createBinaryTreeWithSortedArray(arr,0,arr.length-1);
         int[] arr1 = {1,2,3,4,5,6,7};
@@ -10,18 +10,34 @@ class CompareTree{
             System.out.print("Both Trees are equal");
         else
             System.out.print("Both Trees are not equal");
+        if(c.findTwoTreeAreMirrorImage(root_tree1,root_tree2))
+            System.out.print("Both Trees are equal");
+        else
+            System.out.print("Both Trees are not equal");
     }
 
-    private boolean compareTree(Node<Integer> tree1, Node<Integer> tree2){
+    private boolean compareTree(Node<T> tree1, Node<T> tree2){
         if(tree1 == null && tree2 == null){
             return true;
         }
         if(tree1 != null && tree2!= null){
-            return (tree1.data == tree2.data 
+            return (tree1.data.equals(tree2.data) 
                         && compareTree(tree1.left,tree2.left)
                         && compareTree(tree1.right, tree2.right));
         }
         
+        return false;
+    }
+
+    private boolean findTwoTreeAreMirrorImage(Node<T> tree1, Node<T> tree2){
+        if(tree1 == null && tree2 == null){
+            return true;
+        }
+        if(tree1 != null && tree2!= null){
+            return (tree1.data.equals(tree2.data) 
+                        && compareTree(tree1.right,tree2.left)
+                        && compareTree(tree1.left, tree2.right));
+        }
         return false;
     }
 
