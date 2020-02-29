@@ -1,11 +1,5 @@
 package com.sunandan.LinkedList;
-class Node{
-	public int data;
-	public Node next;
-	Node(int data){
-	    this.data = data;
-	}
-}
+
 
 public class Linked_List{
 	public static void main(String[] args) {

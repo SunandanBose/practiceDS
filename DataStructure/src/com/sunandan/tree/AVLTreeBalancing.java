@@ -18,8 +18,8 @@ public class AVLTreeBalancing {
 		int lhs = height(root.left);
 		int rhs = height(root.right);
 
-		if(!Math.abs(lhs-rhs)<=1)
-			balanceNode(root)
+		if(Math.abs(lhs-rhs)<=1)
+			balanceNode(root);
 
 		if(Math.abs(lhs-rhs)<=1 && isBalanced(root.left) && isBalanced(root.right))
 			return true;
@@ -45,6 +45,7 @@ public class AVLTreeBalancing {
 				return leftRotate(rightRotate(root.left));
 			}
 		}
+		return root;
 	}
 
 	/*
@@ -130,7 +131,7 @@ public class AVLTreeBalancing {
 
 }
 
-class Node{
+/*class Node{
 	int data;
 	Node left;
 	Node right;
@@ -139,4 +140,4 @@ class Node{
 		this.left=null;
 		this.right=null;
 	}
-}
+}*/

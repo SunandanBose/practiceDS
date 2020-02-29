@@ -1,20 +1,20 @@
-
+package com.sunandan.tree;
 
 class ExpresionEvaluator{
 
 	static String answer = "";
 	final static String[] expression = {"+","-","*","/"};
 	public static void main(String[] args) {
-		Node root = createDummydata();
+		GenericNode root = createDummydata();
 		compute(root);
 		System.out.println(answer);
 	}
 
-	private static void compute(Node root){
+	private static void compute(GenericNode root){
 		if(root == null)
 			return;
 		compute(root.left);
-		evaluateExpression(root.data);
+		evaluateExpression((String)root.data);
 		compute(root.right);
 	}
 
@@ -37,26 +37,18 @@ class ExpresionEvaluator{
 	}
 
 
-	private static Node createDummydata(){
-		Node root;
-		root = new Node("+");
-		root.right = (new Node("2"));
-		root.left = (new Node("*"));
-		root.left.left = (new Node("-"));
-		root.left.right = (new Node("4"));
-		root.left.left.left = (new Node("5"));
-		root.left.left.right = (new Node("3"));
+	private static GenericNode createDummydata(){
+		GenericNode root;
+		root = new GenericNode("+");
+		root.right = (new GenericNode("2"));
+		root.left = (new GenericNode("*"));
+		root.left.left = (new GenericNode("-"));
+		root.left.right = (new GenericNode("4"));
+		root.left.left.left = (new GenericNode("5"));
+		root.left.left.right = (new GenericNode("3"));
 		return root;
 	}
 }
 
-class Node{
-	public String data;
-	public Node right;
-	public Node left;
-	Node(String data){
-		this.data = data;
-		this.right = null;
-		this.left = null;
-	}
-}
+
+

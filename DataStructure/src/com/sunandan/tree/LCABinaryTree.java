@@ -1,4 +1,4 @@
-//Lowest Common Ancestor Binary tree
+package com.sunandan.tree;//Lowest Common Ancestor Binary tree
 import java.util.*;
 
 class LCABinaryTree<T>{
@@ -7,7 +7,7 @@ class LCABinaryTree<T>{
     public static void main(String[] args) {
         LCABinaryTree<Integer> lca= new LCABinaryTree<>();
         int[] arr = {1,2,3,4,5,6,7};
-        Node<Integer> rootTreeNode=lca.createBinaryTreeWithSortedArray(arr,0,arr.length-1);
+        GenericNode<Integer> rootTreeNode=lca.createBinaryTreeWithSortedArray(arr,0,arr.length-1);
         Integer lcaValue = lca.findLCA(rootTreeNode,7,1);
         if(lcaValue != null)
             System.out.println("Lowest Common Factor is : "+lcaValue);
@@ -15,7 +15,7 @@ class LCABinaryTree<T>{
             System.out.println("No Common Ancestor found.\nThe value given may not be present.");
     }
 
-    private T findLCA(Node<T> rootTreeNode, Object value1, Object value2){
+    private T findLCA(GenericNode<T> rootTreeNode, Object value1, Object value2){
         int index=0;
         List<T> commonNodesList = new ArrayList<>();
         List<T> path1List = getPath(rootTreeNode,value1);
@@ -31,7 +31,7 @@ class LCABinaryTree<T>{
         return null;
     }
 
-    private   List<T> getPath(Node<T> root, Object value){
+    private   List<T> getPath(GenericNode<T> root, Object value){
         List<T> path = new ArrayList<>();
         path.add(root.data);
         if(root.data.equals(value)){
@@ -50,22 +50,14 @@ class LCABinaryTree<T>{
         return Collections.emptyList();
     }
 
-    private Node<Integer> createBinaryTreeWithSortedArray(int[] arr,int first_pos,int last_pos){
+    private GenericNode<Integer> createBinaryTreeWithSortedArray(int[] arr,int first_pos,int last_pos){
         if(first_pos>last_pos)
                 return null;
         int mid = (first_pos + last_pos)/2;
-        Node<Integer> node = new Node<Integer>(arr[mid]);
+        GenericNode<Integer> node = new GenericNode<Integer>(arr[mid]);
         node.left = createBinaryTreeWithSortedArray(arr, first_pos, mid-1);
         node.right = createBinaryTreeWithSortedArray(arr, mid+1, last_pos);
         return node;
     }
 }
 
- class Node<T>{
-    T data;
-    Node<T> right;
-    Node<T> left;
-    Node(T data){
-        this.data = data;
-    }
-}

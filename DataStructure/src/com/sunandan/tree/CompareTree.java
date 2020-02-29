@@ -1,11 +1,13 @@
+package com.sunandan.tree;
+
 class CompareTree<T>{
 
     public static void main(String[] args) {
         CompareTree<Integer> c = new CompareTree<Integer>();
         int[] arr = {1,2,3,4,5,6,7};
-        Node<Integer> root_tree1=c.createBinaryTreeWithSortedArray(arr,0,arr.length-1);
+        GenericNode<Integer> root_tree1=c.createBinaryTreeWithSortedArray(arr,0,arr.length-1);
         int[] arr1 = {1,2,3,4,5,6,7};
-        Node<Integer> root_tree2=c.createBinaryTreeWithSortedArray(arr1,0,arr1.length-1);
+        GenericNode<Integer> root_tree2=c.createBinaryTreeWithSortedArray(arr1,0,arr1.length-1);
         if(c.compareTree(root_tree1,root_tree2))
             System.out.print("Both Trees are equal");
         else
@@ -16,7 +18,7 @@ class CompareTree<T>{
             System.out.print("Both Trees are not equal");
     }
 
-    private boolean compareTree(Node<T> tree1, Node<T> tree2){
+    private boolean compareTree(GenericNode<T> tree1, GenericNode<T> tree2){
         if(tree1 == null && tree2 == null){
             return true;
         }
@@ -29,7 +31,7 @@ class CompareTree<T>{
         return false;
     }
 
-    private boolean findTwoTreeAreMirrorImage(Node<T> tree1, Node<T> tree2){
+    private boolean findTwoTreeAreMirrorImage(GenericNode<T> tree1, GenericNode<T> tree2){
         if(tree1 == null && tree2 == null){
             return true;
         }
@@ -41,11 +43,11 @@ class CompareTree<T>{
         return false;
     }
 
-    private Node<Integer> createBinaryTreeWithSortedArray(int[] arr,int first_pos,int last_pos){
+    private GenericNode<Integer> createBinaryTreeWithSortedArray(int[] arr,int first_pos,int last_pos){
         if(first_pos>last_pos)
                 return null;
         int mid = (first_pos + last_pos)/2;
-        Node<Integer> node = new Node<Integer>(arr[mid]);
+        GenericNode<Integer> node = new GenericNode<Integer>(arr[mid]);
         node.left = createBinaryTreeWithSortedArray(arr, first_pos, mid-1);
         node.right = createBinaryTreeWithSortedArray(arr, mid+1, last_pos);
         return node;
@@ -53,11 +55,3 @@ class CompareTree<T>{
 
 }
 
-class Node<T>{
-    T data;
-    Node<T> right;
-    Node<T> left;
-    Node(T data){
-        this.data = data;
-    }
-}

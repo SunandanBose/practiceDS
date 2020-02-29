@@ -29,7 +29,7 @@ public class BinaryTree{
 
 
 }
-class Node{
+/*class Node{
 	int data;
 	Node left;
 	Node right;
@@ -39,4 +39,4 @@ class Node{
 		this.right = null;
 		this.left = null;
 	}
-}
+}*/
