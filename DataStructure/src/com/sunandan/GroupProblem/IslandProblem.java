@@ -1,3 +1,5 @@
+package com.sunandan.GroupProblem;
+
 import java.io.*;
 
 class IslandProblem{

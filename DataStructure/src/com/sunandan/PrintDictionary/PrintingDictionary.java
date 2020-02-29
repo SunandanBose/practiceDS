@@ -1,3 +1,5 @@
+package com.sunandan.PrintDictionary;
+
 import java.lang.*;
 
 class PrintingDictionary{

@@ -1,3 +1,5 @@
+package com.raj.sorting;
+
 import java.util.*;
 
 class QuickSort{

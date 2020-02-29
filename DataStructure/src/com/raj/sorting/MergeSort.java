@@ -1,4 +1,4 @@
-// package com.raj.sorting
+ package com.raj.sorting;
 import java.util.*;
 class MergeSort{
     public static void main(String[] args) {
