@@ -1,4 +1,4 @@
-
+package com.sunandan.Map;
 
 // TODO: Make the keys to accept other types. Same for the values.
 // TODO: Propetries of a good hash function
