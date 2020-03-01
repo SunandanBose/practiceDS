@@ -19,7 +19,7 @@ class IslandProblem{
                     visited[i][j] = true;
                     clusterCount ++;
                     for(int dir=0;dir<4;dir++){
-                        visited = hasSurroundingNeighbours(grid,visited,i+xdir[dir],j+ydir[dir]);
+                        visited = markNeighboursAsVisited(grid,visited,i+xdir[dir],j+ydir[dir]);
                     }
                 } 
             }
@@ -27,12 +27,12 @@ class IslandProblem{
         return clusterCount;
     }
 
-    private boolean[][] hasSurroundingNeighbours(int[][] grid, boolean[][] visited, int row, int column) {
+    private boolean[][] markNeighboursAsVisited(int[][] grid, boolean[][] visited, int row, int column) {
         if(row >= 0 && column >= 0 && row<grid.length && column < grid[row].length
                 && grid[row][column] == 1 && !visited[row][column]){
                     visited[row][column] = true; 
                     for(int dir=0;dir<4;dir++){
-                        visited = hasSurroundingNeighbours(grid,visited,row+xdir[dir],column+ydir[dir]);
+                        visited = markNeighboursAsVisited(grid,visited,row+xdir[dir],column+ydir[dir]);
                     }
         }
         return visited;
