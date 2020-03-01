@@ -2,7 +2,7 @@ package com.sunandan.GroupProblem;
 
 import java.io.*;
 
-class IslandProblem{
+public class IslandProblem{
     public static void main(String[] args) {
         IslandProblem ip = new IslandProblem();
         int[][] grid = {{1,0,1,1,1},{0,0,0,1,0},{0,1,1,0,0},{0,1,1,0,1}};
