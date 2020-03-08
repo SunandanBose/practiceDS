@@ -1,4 +1,4 @@
-package com.sunandan.RotationMatrix;
+package com.sunandan.Matrix;
 
 
 
