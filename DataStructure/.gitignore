@@ -4,3 +4,11 @@
 .gradle
 **/.gradle/**
 **/.idea/**
+**/.classpath/**
+*.classpath
+**/.project/**
+**/bin/**
+*.project
+*.perfs
+*.settings/
+**/.settings/
