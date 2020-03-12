@@ -2,27 +2,33 @@ package com.sunandan.heap;
 
 public class HeapSort {
 
-    public void heapify(int[] array, int index){
+    public void heapify(int[] array, int max_length, int index){
         int largest = index;
         int left  = 2 * index + 1;
         int right = 2 * index + 2;
 
-        if(left < array.length && (array[index] <= array[2* index + 1])){
+        if(left < max_length && (array[left] <= array[largest])){
             largest = left;
         }
-        if(right < array.length && (array[index] <= array[2* index + 2])){
+        if(right < max_length && (array[right] <= array[largest])){
             largest = right;
         }
         if(largest != index){
             array = swap(array, index, largest);
-            heapify(array, largest);
+            heapify(array, max_length, largest);
         }
     }
 
     public void sort(int[] array){
         int n = array.length;
-        for(int i=(n/2)-1;i>=0;i--){
-            heapify(array,i);
+        for(int i=n/2-1;i>=0;i--){
+            heapify(array,n,i);
+        }
+        for(int i= n-1;i>=0;i--){
+            int temp = array[0];
+            array[0] = array[i];
+            array[i]=temp;
+            heapify(array,i,0);
         }
         print(array);
     }
@@ -43,7 +49,7 @@ public class HeapSort {
 
     public static void main(String[] args) {
         HeapSort hs = new HeapSort();
-        int[] array = {5,6,1,4,88,3};
+        int[] array = {5,1,6,4,8,3};
         hs.sort(array);
     }
 }
