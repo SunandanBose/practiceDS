@@ -15,6 +15,10 @@ class RouteNodes{
         graph.connectTwoNodes("d", "b");
         graph.connectTwoNodes("e", "a");
 
+        System.out.println(graph.pathExists("a", "b")); 
+        System.out.println(graph.pathExists("a", "e")); 
+        System.out.println(graph.pathExists("a", "z")); 
+        System.out.println(graph.pathExists("x", "z")); 
         System.out.println(graph);
 
     }

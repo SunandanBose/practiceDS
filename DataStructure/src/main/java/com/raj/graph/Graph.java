@@ -37,23 +37,23 @@ public class Graph<T>{
     }
 
     public Node<T> connectTwoNodes(T fromNode, T toNode){
-        Node<T> node_1 = getNode(fromNode);
-        Node<T> node_2 = getNode(toNode);
-        if(node_1 != null && node_2 != null){
-            node_1.addEdge(node_2);
-            return node_1;
+        Optional<Node<T>> node_1 = getNode(fromNode);
+        Optional<Node<T>> node_2 = getNode(toNode);
+        if(node_1.isPresent() && node_2.isPresent()){
+            node_1.get().addEdge(node_2.get());
+            return node_1.get();
         }
         return null;
         
     }
 
-    private Node<T> getNode(T node){
-        for(int i = 0; i < nodes.size(); i++){
-            if(nodes.get(i).data.equals(node)){
-                return nodes.get(i);
-            }
+    public boolean pathExists(T fromNode, T toNode){
+        Optional<Node<T>> node_1 = getNode(fromNode);
+        Optional<Node<T>> node_2 = getNode(toNode);
+        if(!node_1.isPresent() || !node_2.isPresent()){
+            return false;
         }
-        return null;
+        return node_1.get().edges.stream().anyMatch(x -> x == node_2.get());
     }
 
     @Override
@@ -63,6 +63,15 @@ public class Graph<T>{
             output += nodes.get(i).toString()+"\n";
         }
         return output;
+    }
+
+    private Optional<Node<T>> getNode(T node){
+        for(int i = 0; i < nodes.size(); i++){
+            if(nodes.get(i).data.equals(node)){
+                return Optional.of(nodes.get(i));
+            }
+        }
+        return Optional.empty();
     }
 
 }
