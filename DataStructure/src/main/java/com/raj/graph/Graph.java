@@ -32,7 +32,9 @@ public class Graph<T>{
     
     public void add(T value){
         Node<T> node = new Node<T>(value);
-        nodes.add(node);
+        boolean match = nodes.stream().anyMatch(x -> x.data == value);
+        if(!match)
+            nodes.add(node);
     }
     public Graph(){
     }
