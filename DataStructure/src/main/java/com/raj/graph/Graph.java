@@ -50,13 +50,37 @@ public class Graph<T>{
         
     }
 
-    public boolean pathExists(T fromNode, T toNode){
+    private boolean pathExists(T fromNode, T toNode, Set<T> visited){
         Optional<Node<T>> node_1 = getNode(fromNode);
         Optional<Node<T>> node_2 = getNode(toNode);
-        if(!node_1.isPresent() || !node_2.isPresent()){
+        if(!node_1.isPresent() || !node_2.isPresent()) {
             return false;
         }
-        return node_1.get().edges.stream().anyMatch(x -> x == node_2.get());
+        // TODO: This line is untested.
+        visited.add(fromNode);
+        visited.add(toNode);
+        if(!edgeExists(fromNode,toNode) && !isVisited(toNode,visited)){
+            List<Node<T>> edges = getNode(toNode).get().edges;
+            for(int i = 0; i< edges.size(); i++){
+                if(!isVisited(edges.get(i).data,visited)){
+                    pathExists(fromNode,edges.get(i).data,visited);
+                }
+            }
+        }
+        else{
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isVisited(T node, Set<T> visited) {
+        return visited.contains(node);
+    }
+
+
+    public boolean pathExists(T fromNode, T toNode){
+        Set<T> visitedList = new HashSet<>();
+        return pathExists(fromNode,toNode,visitedList);
     }
 
     @Override
