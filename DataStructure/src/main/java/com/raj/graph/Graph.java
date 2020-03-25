@@ -77,13 +77,13 @@ public class Graph<T>{
         return Optional.empty();
     }
 
-    public  List<T> getEdgeOfNode(T node){
-        List<T> edgeList = new ArrayList<>();
-        Optional<Node<T>> node_1 = getNode(node);
-        if(node_1.isPresent()){
-            edgeList = node_1.get().edges.stream().map(x -> x.data).collect(Collectors.toList());
+    public  boolean edgeExists(T root, T edge){
+        Optional<Node<T>> node = getNode(root);
+        Optional<Node<T>> edgeNode = getNode(edge);
+        if(node.isPresent() && edgeNode.isPresent()){
+            return node.get().edges.contains(edgeNode.get());
         }
-        return edgeList;
+        return false;
     }
 
 }

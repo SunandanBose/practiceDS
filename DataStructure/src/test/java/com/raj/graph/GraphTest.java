@@ -3,8 +3,7 @@ package com.raj.graph;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class GraphTest {
     private Graph<String> graph = new Graph<>();
@@ -30,9 +29,6 @@ public class GraphTest {
         graph.connectTwoNodes("E", "A");
         graph.connectTwoNodes("F", "B");
         graph.connectTwoNodes("G", "D");
-
-        System.out.println(graph);
-
     }
     @Test
     public void testHasPath() {
@@ -40,4 +36,9 @@ public class GraphTest {
         assertTrue(graph.pathExists("A","B"));
     }
 
+    @Test
+    public void testEdgeExistsInElement(){
+        assertTrue(graph.edgeExists("A", "D"));
+        assertFalse(graph.edgeExists("A", "B"));
+    }
 }
