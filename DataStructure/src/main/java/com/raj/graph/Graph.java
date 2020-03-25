@@ -1,5 +1,6 @@
 package com.raj.graph;
 import java.util.*;
+import java.util.stream.Collectors;
 
 class Node<T> {
     T data;
@@ -65,13 +66,22 @@ public class Graph<T>{
         return output;
     }
 
-    private Optional<Node<T>> getNode(T node){
+    public Optional<Node<T>> getNode(T node){
         for(int i = 0; i < nodes.size(); i++){
             if(nodes.get(i).data.equals(node)){
                 return Optional.of(nodes.get(i));
             }
         }
         return Optional.empty();
+    }
+
+    public  List<T> getEdgeOfNode(T node){
+        List<T> edgeList = new ArrayList<>();
+        Optional<Node<T>> node_1 = getNode(node);
+        if(node_1.isPresent()){
+            edgeList = node_1.get().edges.stream().map(x -> x.data).collect(Collectors.toList());
+        }
+        return edgeList;
     }
 
 }
