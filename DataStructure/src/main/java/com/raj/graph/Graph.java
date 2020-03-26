@@ -31,6 +31,13 @@ class Node<T> {
 public class Graph<T> {
     List<Node<T>> nodes = new LinkedList<>();
 
+    public Graph() {
+    }
+
+    public List<T> getNodes() {
+        return nodes.stream().map(x -> x.data).collect(Collectors.toList());
+    }
+
     public void add(T value) {
         Node<T> node = new Node<T>(value);
         boolean match = nodes.stream().anyMatch(x -> x.data == value);
@@ -38,8 +45,7 @@ public class Graph<T> {
             nodes.add(node);
     }
 
-    public Graph() {
-    }
+
 
     public Node<T> connectTwoNodes(T fromNode, T toNode) {
         Optional<Node<T>> node_1 = getNode(fromNode);

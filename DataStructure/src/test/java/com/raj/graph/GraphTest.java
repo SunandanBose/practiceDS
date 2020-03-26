@@ -2,6 +2,11 @@ package com.raj.graph;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -57,6 +62,14 @@ public class GraphTest {
         assertTrue(graph.pathExists("D", "G"));
         assertTrue(graph.pathExists("D", "C"));
     }
+
+    @Test
+    public void testGetNodesShouldReturnAllvaluesOfGraph(){
+        List<String> expectedValues = Arrays.asList( "A","B","C","D","E","F","G");
+        List<String> actualValues = graph.getNodes();
+        assertArrayEquals(expectedValues.toArray(),actualValues.toArray());
+    }
+
 
     @Test
     public void testEdgeExistsInElement(){
