@@ -31,9 +31,31 @@ public class GraphTest {
         graph.connectTwoNodes("G", "D");
     }
     @Test
-    public void testHasPath() {
+    public void testHasPathShouldReturnTrueForPathFromAtoBandD() {
+        // A -> , E  
+        // B -> C, F 
+        // C -> B, D  
+        // D -> , G, C 
+        // E -> A 
+        // F -> B 
+        // G -> D
+
         assertTrue(graph.pathExists("A","D"));
         assertTrue(graph.pathExists("A","B"));
+        //assertTrue(graph.pathExists("A","C"));
+        //assertTrue(graph.pathExists("A","D"));
+        //assertTrue(graph.pathExists("A","E"));
+        //assertTrue(graph.pathExists("A","F"));
+        //assertTrue(graph.pathExists("A","G"));
+    }
+
+    @Test
+    public void testDisconnectPathShouldRemoveConnectionBetweenAandD(){
+        graph.disconnectTwoNodes("A", "D");
+        assertFalse(graph.pathExists("A", "D"));
+        assertTrue(graph.pathExists("D", "A"));
+        assertTrue(graph.pathExists("D", "G"));
+        assertTrue(graph.pathExists("D", "C"));
     }
 
     @Test
