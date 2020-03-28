@@ -6,24 +6,10 @@ import java.util.*;
 
 public class CollapseRoad {
 
-    Set<Integer> cities = new HashSet<>();
-
-    public static void main(String[] args) {
-        int numOfCities = 3;
-        int nuOfRoads = 2;
-        int[][] path = {{1,2},{2,3}};
-        //int[][] path = {{1, 4}, {1, 5}, {2, 3}, {2, 6}, {3, 4}, {4, 7}};
-        // 1-4 | 1-5 | 2-3 | 2-6 | 3-4 | 4-7
-        int[] ans = solution(numOfCities, nuOfRoads, path);
-        System.out.println(Arrays.toString(ans));
-
-
-    }
-
     public static int[] solution(int numOfCities, int nuOfRoads, int[][] path) {
         int[] ans = new int[nuOfRoads];
         Graph<Integer> roadGraph = createGraph(nuOfRoads, path);
-        System.out.println(roadGraph.toString());
+        System.out.println(roadGraph);
         for (int i = 0; i < nuOfRoads; i++) {
             roadGraph = collapseRoad(path, i, roadGraph);
             ans[i] = countUnreachableCities(numOfCities, roadGraph);
@@ -39,9 +25,10 @@ public class CollapseRoad {
 
     private static int countUnreachableCities(int numOfCities, Graph<Integer> roadGraph) {
         int count = 0;
-        for (int fromCity = 1; fromCity <= numOfCities; fromCity++) {
-            for (int toCity = fromCity + 1; toCity <= numOfCities; toCity++) {
-                if (!roadGraph.pathExists(fromCity, toCity)) {
+        List<Integer> getAllCities = roadGraph.getNodes();
+        for (int i = 0; i < numOfCities; i++) {
+            for (int j = i + 1; j < numOfCities; j++) {
+                if (!roadGraph.pathExists(getAllCities.get(i), getAllCities.get(j))) {
                     count++;
                 }
             }
@@ -51,7 +38,6 @@ public class CollapseRoad {
 
     private static Graph<Integer> createGraph(int nuOfRoads, int[][] path) {
         Graph<Integer> graph = new Graph<>();
-        List<Integer> list = new ArrayList();
         for (int i = 0; i < nuOfRoads; i++) {
             graph.add(path[i][0]);
             graph.add(path[i][1]);
@@ -66,55 +52,3 @@ public class CollapseRoad {
 
 }
 
-
-// [1, 2, 3, 4]
-//
-//A -> D, E  B -> C, F  C -> B, D  D -> A, G, C E -> A F -> B G -> D
-//1,4| 1 -5
-/*
-    Adj Matrix
-        1   2   3   4
-     1  0   1   1   0
-     2  1   0   0   1
-     3  0   0   0   0
-     4  0   1   0   0
-
-     Route
-        1   2   3   4
-     1  1   1   1   0
-     2  0   1   0   0
-     3  0   0   1   0
-     4  0   0   0   1
-
-
-     Route
-        1   2   3   4
-     1  1   1   1   1
-     2  0   1   0   0
-     3  0   0   1   0
-     4  0   0   0   1
-//create  adj matrix
-// getRoutematrix(int,int)
-//remove element
-3,2
-3,1
-findpath(from , to){
-    if(a[from][to] == 0){
-        for(loop on "to" column){
-            if(a[][] ==1){
-                findpath(from,row);
-            }
-        }
-    }
-}
-
-1-3
-1-4
-2-3
-2-4
- */
-////    4   2  13 12 34                                    1 -> 3, 2
-//2 -> 1, 4
-//                                                         3 -> 1
-//                                                       4 -> 2
-////    4   6    24 34 -> 0 0 0  3

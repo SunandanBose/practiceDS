@@ -5,22 +5,22 @@ import java.util.stream.Collectors;
 
 class Node<T> {
     T data;
-    List<Node<T>> edges;
+    List<Node<T>> children;
 
     public Node(T data) {
         this.data = data;
-        this.edges = new LinkedList<>();
+        this.children = new LinkedList<>();
     }
 
     public void addEdge(Node<T> edge) {
-        edges.add(edge);
+        children.add(edge);
     }
 
     @Override
     public String toString() {
         String output = "";
-        for (int i = 0; i < edges.size(); i++) {
-            output += edges.get(i).data.toString();
+        for (int i = 0; i < children.size(); i++) {
+            output += children.get(i).data.toString();
         }
         output = this.data.toString() + " - - > " + output;
         return output;
@@ -67,7 +67,7 @@ public class Graph<T> {
     }
 
     private void removeNodeEdge(Node<T> node, T edgeToRemove) {
-        List<Node<T>> edges = node.edges;
+        List<Node<T>> edges = node.children;
         for (int i = 0; i < edges.size(); i++) {
             if (edges.get(i).data == edgeToRemove) {
                 edges.remove(i);
@@ -88,7 +88,7 @@ public class Graph<T> {
             return true;
         }
 
-        List<Node<T>> edges = getNode(fromNode).get().edges;
+        List<Node<T>> edges = getNode(fromNode).get().children;
         for (int i = 0; i < edges.size(); i++) {
             if (!isVisited(edges.get(i).data, visited)) {
                 if (pathExists(edges.get(i).data, toNode, visited)) {
@@ -131,7 +131,7 @@ public class Graph<T> {
         Optional<Node<T>> node = getNode(root);
         Optional<Node<T>> edgeNode = getNode(edge);
         if (node.isPresent() && edgeNode.isPresent()) {
-            return node.get().edges.contains(edgeNode.get());
+            return node.get().children.contains(edgeNode.get());
         }
         return false;
     }
