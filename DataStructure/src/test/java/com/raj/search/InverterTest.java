@@ -33,7 +33,7 @@ public class InverterTest {
     }
 
     @Test
-    public void testBinarySearchValue18ShouldGetAnswer2() {
+    public void testBinarySearchValue18ShouldReturnNull() {
         Limit limit = new Limit(BigInteger.ZERO,BigInteger.valueOf(100L));
         BigInteger x = inv.binarySearch(y -> y.multiply(BigInteger.TEN), limit, new BigInteger("18"));
         assertNull(x);
