@@ -19,7 +19,7 @@ public class InverterTest {
     }
 
     @Test
-    public void testBinarySearchValue18ForAnswer180() {
+    public void testBinarySearchValue18ForAnswer188() {
         Limit limit = inv.findLimits(x -> x.divide(BigInteger.TEN), new BigInteger("18"));
         BigInteger x = inv.binarySearch(y -> y.divide(BigInteger.TEN), limit, new BigInteger("18"));
         assertTrue(new BigInteger("188").compareTo(x) == 0);
@@ -37,5 +37,11 @@ public class InverterTest {
         Limit limit = new Limit(BigInteger.ZERO,BigInteger.valueOf(100L));
         BigInteger x = inv.binarySearch(y -> y.multiply(BigInteger.TEN), limit, new BigInteger("18"));
         assertNull(x);
+    }
+
+    @Test
+    public void testFindInverseForYValue18ShouldReturn188(){
+        BigInteger x = inv.findInverse(y -> y.divide(BigInteger.TEN), new BigInteger("18"));
+        assertTrue(new BigInteger("188").compareTo(x) == 0);
     }
 }
