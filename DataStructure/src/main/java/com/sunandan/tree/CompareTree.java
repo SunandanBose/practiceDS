@@ -37,8 +37,8 @@ class CompareTree<T>{
         }
         if(tree1 != null && tree2!= null){
             return (tree1.data.equals(tree2.data) 
-                        && compareTree(tree1.right,tree2.left)
-                        && compareTree(tree1.left, tree2.right));
+                        && findTwoTreeAreMirrorImage(tree1.right,tree2.left)
+                        && findTwoTreeAreMirrorImage(tree1.left, tree2.right));
         }
         return false;
     }
