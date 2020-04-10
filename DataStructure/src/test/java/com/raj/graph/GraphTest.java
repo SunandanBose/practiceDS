@@ -37,10 +37,10 @@ public class GraphTest {
     }
     @Test
     public void testHasPathShouldReturnTrueForPathFromAtoBandD() {
-        // A -> , E  
+        // A -> D, E  
         // B -> C, F 
         // C -> B, D  
-        // D -> , G, C 
+        // D -> A, G, C 
         // E -> A 
         // F -> B 
         // G -> D
@@ -75,5 +75,13 @@ public class GraphTest {
     public void testEdgeExistsInElement(){
         assertTrue(graph.edgeExists("A", "D"));
         assertFalse(graph.edgeExists("A", "B"));
+    }
+
+    @Test
+    public void testGetPathForNodeAandBShouldReturnDGC(){
+        List<String> expectedPath = Arrays.asList("A","D","C","B");
+        assertEquals(graph.getPath("A","B").toString(),expectedPath.toString());
+        expectedPath = Arrays.asList("A","D");
+        assertEquals(graph.getPath("A","D").toString(),expectedPath.toString());
     }
 }

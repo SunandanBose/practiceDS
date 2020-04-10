@@ -136,4 +136,34 @@ public class Graph<T> {
         return false;
     }
 
+    public List<T> getPath(T fromNode, T toNode) {
+        Set<T> visitedList = new HashSet<>();
+        List<T> path = getPath(fromNode,toNode,visitedList);
+        return path;
+    }
+
+    private List<T> getPath(T fromNode, T toNode, Set<T> visited){
+        Optional<Node<T>> node_1 = getNode(fromNode);
+        Optional<Node<T>> node_2 = getNode(toNode);
+        List<T> path = new ArrayList<>();
+        path.add(fromNode);
+        if (!node_1.isPresent() || !node_2.isPresent()) {
+            return Collections.emptyList();
+        }
+        visited.add(fromNode);
+        if (edgeExists(fromNode, toNode)) {
+            path.addAll(Collections.singletonList(toNode));
+            return path;
+        }
+
+        List<Node<T>> edges = getNode(fromNode).get().children;
+        for (int i = 0; i < edges.size(); i++) {
+            if (!isVisited(edges.get(i).data, visited)) {
+                path.addAll(getPath(edges.get(i).data, toNode, visited));
+                if(path.get(path.size()-1) == toNode)
+                    return path;
+            }
+        }
+        return Collections.emptyList();
+    }
 }
