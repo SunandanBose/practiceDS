@@ -2,35 +2,31 @@ package com.sunandan.permutation;
 
 
 import java.util.*;
- import java.util.stream.*;
 
- class CoinChangeProblem{
+class CoinChangeProblem {
+	public List<List<Integer>> getDenomination(List<Integer> coinDenominations, int finalCoinAmount) {
+		List<List<Integer>> resultList = new ArrayList<>();
+		for (Integer i : coinDenominations) {
+			List<Integer> resultSet = new ArrayList<>();
+			resultSet.add(i);
+			List<Integer> denominations = getDenomination(coinDenominations, finalCoinAmount - i, resultSet);
+			resultList.add(denominations);
+		}
+		return resultList;
+	}
 
-
-
- 	public static void main(String args[]){
-
- 		List<Integer> coinDeminations = Arrays.asList(1,2,3);
- 		getDenomination(new ArrayList<>(),coinDeminations, 4);
-
- 	}
-  
- 	private static void getDenomination(List<Integer> resultSet, List<Integer> coinDeminations, int finalCoinAmount){
- 		int sum = resultSet.stream().reduce(0, (a, b) -> a + b);
- 		if( sum == finalCoinAmount){
- 			resultSet.forEach(System.out::print);
- 			System.out.println();
- 			return;
- 		}
- 		for(Integer i : coinDeminations) {
- 			sum = resultSet.stream().reduce(0, (a, b) -> a + b);
- 			List<Integer> temp = new ArrayList<>(resultSet);
- 			if(sum + i <= finalCoinAmount){
- 				temp.add(i);
- 				getDenomination(temp,coinDeminations,finalCoinAmount);
- 			}
- 		}
- 		return;
- 	}
-
- }
+	// [1,2,3] - 3, [1]
+	private List<Integer> getDenomination(List<Integer> coinDenominations, int finalCoinAmount, List<Integer> resultSet) {
+		if(finalCoinAmount == 0){
+			return resultSet;
+		}
+		for (Integer i : coinDenominations) {
+			int sum = resultSet.stream().reduce(0, (a, b) -> a + b);
+			if(sum + i <= finalCoinAmount){
+				resultSet.add(i);
+				getDenomination(coinDenominations, finalCoinAmount - i, resultSet);
+			}
+		}
+		return resultSet;
+	}
+}
