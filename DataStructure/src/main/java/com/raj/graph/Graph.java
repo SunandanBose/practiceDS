@@ -166,4 +166,10 @@ public class Graph<T> {
         }
         return Collections.emptyList();
     }
+
+    public List<T> getEdgeList(T value){
+        Optional<Node<T>> node = getNode(value);
+        return node.get().children.stream().map(x -> x.data).collect(Collectors.toList());
+
+    }
 }
