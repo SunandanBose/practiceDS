@@ -6,27 +6,26 @@ import java.util.*;
 class CoinChangeProblem {
 	public List<List<Integer>> getDenomination(List<Integer> coinDenominations, int finalCoinAmount) {
 		List<List<Integer>> resultList = new ArrayList<>();
-		for (Integer i : coinDenominations) {
-			List<Integer> resultSet = new ArrayList<>();
-			resultSet.add(i);
-			List<Integer> denominations = getDenomination(coinDenominations, finalCoinAmount - i, resultSet);
-			resultList.add(denominations);
+		HashMap<Integer, List<Integer>> found = new HashMap<>();
+		for (Integer coinValue : coinDenominations) {
+		    List<Integer> combinations = new ArrayList<>();
+		    if(coinValue == finalCoinAmount){
+                resultList.addAll(new ArrayList<>(Collections.singletonList(new ArrayList<>(Collections.singletonList(coinValue)))));
+                return resultList;
+            }
+		    combinations.add(coinValue);
+		    if(found.get(coinValue) != null){
+                List<Integer> integers = found.get(coinValue);
+                return Collections.singletonList(integers);
+            }
+            List<List<Integer>> intermediateCombinations = getDenomination(coinDenominations, finalCoinAmount - coinValue);
+		    for (List<Integer> intermediate : intermediateCombinations){
+		        intermediate.addAll(combinations);
+            }
+		    found.put(coinValue, combinations);
+		    resultList.addAll(intermediateCombinations);
+
 		}
 		return resultList;
-	}
-
-	// [1,2,3] - 3, [1]
-	private List<Integer> getDenomination(List<Integer> coinDenominations, int finalCoinAmount, List<Integer> resultSet) {
-		if(finalCoinAmount == 0){
-			return resultSet;
-		}
-		for (Integer i : coinDenominations) {
-			int sum = resultSet.stream().reduce(0, (a, b) -> a + b);
-			if(sum + i <= finalCoinAmount){
-				resultSet.add(i);
-				getDenomination(coinDenominations, finalCoinAmount - i, resultSet);
-			}
-		}
-		return resultSet;
 	}
 }
