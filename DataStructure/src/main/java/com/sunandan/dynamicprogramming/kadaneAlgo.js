@@ -14,9 +14,16 @@ function kadaneAlgo(matrix){
         if(currentSum > maxValue)
             maxValue = currentSum;
     }
-    return maxValue;
+    if(currentSum <  maxValue){
+        for(let i=currentSubArray.length-1;i>=0;i--){
+            currentSum -= currentSubArray[i];
+            currentSubArray.pop();
+            if(currentSum == maxValue) break;
+        }
+    }
+    return currentSubArray;
 }
 
 console.log(kadaneAlgo([-2,4,5,1,-8,11]));
-
+console.log(kadaneAlgo([-2,4,5,1,-8]));
 
