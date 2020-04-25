@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -13,8 +14,14 @@ public class CoinChangeProblemTest {
 
     @Test
     public void testMethodGetDenomination(){
-        ccp.getDenomination(new ArrayList<>(), Arrays.asList(1,2,3),4);
-        int[][] expected = {{1,1,1,1},};
+        List<List<Integer>> result = ccp.getDenomination(Arrays.asList(1, 2, 3), 4);
+        System.out.println(result);
+    }
+
+    @Test
+    public void testMethodGetDenominationFor5(){
+        List<List<Integer>> result = ccp.getDenomination(Arrays.asList(4), 4);
+        System.out.println(result);
     }
 
 }

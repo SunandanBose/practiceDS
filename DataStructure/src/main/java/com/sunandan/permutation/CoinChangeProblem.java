@@ -9,6 +9,9 @@ class CoinChangeProblem {
 		HashMap<Integer, List<Integer>> found = new HashMap<>();
 		for (Integer coinValue : coinDenominations) {
 		    List<Integer> combinations = new ArrayList<>();
+		    if (coinValue > finalCoinAmount){
+		        return resultList;
+            }
 		    if(coinValue == finalCoinAmount){
                 resultList.addAll(new ArrayList<>(Collections.singletonList(new ArrayList<>(Collections.singletonList(coinValue)))));
                 return resultList;
