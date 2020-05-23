@@ -10,3 +10,4 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution | T
 4 | Unique paths matrix |[Explanation](https://leetcode.com/problems/unique-paths/)| [Code](DataStructure/src/main/java/com/sunandan/dynamicprogramming)||
 5 | Gas Station |[Explanation](https://www.interviewbit.com/problems/gas-station/)| [Code](DataStructure/src/main/java/com/sunandan/google/GasStation.java)|[Test](DataStructure/src/test/java/com/sunandan/google/GasStationTest.java)|
 6 | Max Rectangle |[Explanation](https://leetcode.com/problems/maximal-rectangle/)| [Code](DataStructure/src/main/java/com/sunandan/google/MaxRectangle.java)|[Test](DataStructure/src/test/java/com/sunandan/google/MaxRectangleTest.java)|
+7 | Largest rectangle in histogram |[Explanation](https://leetcode.com/problems/largest-rectangle-in-histogram/)| [Code](DataStructure/src/main/java/com/raj/google/histogram.py)||
