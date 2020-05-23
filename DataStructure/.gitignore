@@ -12,3 +12,6 @@
 *.perfs
 *.settings/
 **/.settings/
+**/env/**
+**/__pycache__/**
+
