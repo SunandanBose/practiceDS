@@ -7,7 +7,7 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 1 | Coin change problem                |[Explanation](DataStructure/src/main/java/com/sunandan/permutation/Readme.md)|[Code](DataStructure/src/main/java/com/sunandan/permutation/CoinChangeProblem.java)|[Test](DataStructure/src/test/java/com/sunandan/permutation/CoinChangeProblemTest.java)|
 2 | Kadane's algorithm  | [Explanation](https://leetcode.com/problems/maximum-subarray/)| [Code](DataStructure/src/main/java/com/sunandan/dynamicprogramming/kadaneAlgo.js)||
 3 | String Permutation algorithm || [Code](DataStructure/src/main/java/com/sunandan/permutation/permutation_string.js)||
-4 | Unique paths matrix |[Explanation](https://leetcode.com/problems/unique-paths/)| [Code](DataStructure/src/main/java/com/sunandan/dynamicprogramming)||
+4 | Unique paths matrix |[Explanation](https://leetcode.com/problems/unique-paths/)| [Code](DataStructure/src/main/java/com/sunandan/dynamicprogramming/uniquePath.js)||
 5 | Gas Station |[Explanation](https://www.interviewbit.com/problems/gas-station/)| [Code](DataStructure/src/main/java/com/sunandan/google/GasStation.java)|[Test](DataStructure/src/test/java/com/sunandan/google/GasStationTest.java)|
 6 | Max Rectangle |[Explanation](https://leetcode.com/problems/maximal-rectangle/)| [Code](DataStructure/src/main/java/com/sunandan/google/MaxRectangle.java)|[Test](DataStructure/src/test/java/com/sunandan/google/MaxRectangleTest.java)|
 7 | Distinct Sub - Sequences |[Explanation](https://leetcode.com/problems/distinct-subsequences/)| [Code](DataStructure/src/main/java/com/sunandan/google/DistinctSubsequence.java)|[Test](DataStructure/src/test/java/com/sunandan/google/DistinctSubsequenceTest.java)|
