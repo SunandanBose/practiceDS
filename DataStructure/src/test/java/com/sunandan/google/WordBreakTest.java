@@ -35,5 +35,10 @@ public class WordBreakTest {
         assertEquals(false,wb.wordBreak("a", Arrays.asList(input)));
     }
 
+    @Test
+    public void test5MethodWordBreak() {
+        String[] input = {"a","b"};
+        assertEquals(true,wb.wordBreak("ab", Arrays.asList(input)));
+    }
 
 }
