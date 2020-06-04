@@ -1,24 +1,3 @@
-# {
-#     r: {
-#         keys: {
-#             a: {
-#                 keys: {
-#                     m: {
-#                         isWordEnd: True
-#                     }
-#                     j: {
-#                         isWordEnd: True
-#                         keys: {
-#                             a: {
-#                                 isWordEnd: True   
-#                             }
-#                         }
-#                     }
-#                 }
-#             }
-#         }
-#     }
-# }
 class Node:
     def __init__(self, isWordEnding=False):
         self.dictionary = {}
@@ -54,11 +33,31 @@ class Trie:
             else: return False
         
         return currentNode.isWordEnding
+
+class Solution:
+    def __init__:
+        self.dict = {}
+
+    def word_break(self, stringToSegment, dictionary):
+        trie = Trie()
+        [ trie.add(word) for word in dictionary ]
+        return self.checkIfPossible(stringToSegment, trie)
         
-trie = Trie()            
-trie.add('ram')
-print(trie.isWordPresent('ram'))
-print(trie.isWordPresent('ra'))
-print(trie.isWordPresent('rama'))
-                
-            
+    def checkIfPossible(self, word, trie):
+        currentNode = trie.node
+        index = 0
+        if word == '':
+            return True
+        while index < len( word ):
+            if word[index] in currentNode.dictionary:
+                currentNode = currentNode.dictionary[word[index]]
+                index = index + 1
+                if currentNode.isWordEnding:
+                    isPossible = self.checkIfPossible(word[index:], trie)
+                    if isPossible:
+                        return True
+            else: break
+        return False
+
+print(Solution().word_break('myinterviewtrainer', ['trainer', 'my', 'interview']))
+
