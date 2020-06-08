@@ -15,7 +15,7 @@ def isInterLeave(A, B, C):
     if B[0] == C[0]:
         resB = isInterLeave(A, B[1:], C[1:])
     res = resA or resB
-    return res
+    return res 
 
 print(isInterLeave('aa', 'bb', 'aabb'))
 print(isInterLeave('aba', 'bb', 'abbba'))
