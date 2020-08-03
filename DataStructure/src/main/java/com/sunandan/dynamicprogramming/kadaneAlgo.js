@@ -3,6 +3,7 @@ function kadaneAlgo(matrix){
     let currentSum = matrix[0];
     let currentSubArray = [];
     for(let i=1;i<matrix.length;i++){
+        //if currentSum is negative, reset all values to current value
         if((currentSum + matrix[i]) < matrix[i] ){
             currentSubArray = [matrix[i]];
             currentSum = matrix[i];
