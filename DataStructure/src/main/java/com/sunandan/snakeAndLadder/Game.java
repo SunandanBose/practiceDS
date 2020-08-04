@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Game {
+public class Game implements  Observer{
 
-    LinkedList<Player> players = new LinkedList<Player>();
+    private LinkedList<Player> players = new LinkedList<Player>();
+    private List<Player> playerRanking = new ArrayList<>();
 
-    List<Player> playerRanking = new ArrayList<>();
+    private Board board ;
+    private int numberOfPlayers;
 
-    Board board = new Board();
+    public Game(int numberOfPlayers) {
+        this.numberOfPlayers = numberOfPlayers;
+        this.board = new Board(new Notifier(this));
+    }
 
-    void emulate(int numberOfPlayers) {
+
+    void emulate() {
         System.out.println("Game has started with : " + numberOfPlayers + " players");
         for (int i = 0; i < numberOfPlayers; i++) {
             players.add(new Player());
@@ -23,16 +29,21 @@ public class Game {
     private void play() {
         int count = 0;
         while (playerRanking.size() < players.size()) {
-            players.get(count % players.size()).rollDice(board);
             count++;
+            players.get(count % players.size()).rollDice(board);
         }
 
     }
 
     public static void main(String[] args) {
         int numberOfPlayers = Integer.parseInt(args[0]);
-        new Game().emulate(numberOfPlayers);
+        Game game = new Game(numberOfPlayers);
+        game.emulate();
     }
 
 
+    @Override
+    public void notify(Player player) {
+        playerRanking.add(player);
+    }
 }
