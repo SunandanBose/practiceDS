@@ -15,8 +15,14 @@ public class Player {
 
     public void rollDice(Board board) {
         int result = dice.roll();
-        System.out.println(result);
+        position = board.getNextPosition(position,result,this);
     }
 
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

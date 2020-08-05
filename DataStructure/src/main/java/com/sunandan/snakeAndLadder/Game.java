@@ -21,17 +21,18 @@ public class Game implements  Observer{
     void emulate(Dice dice) {
         System.out.println("Game has started with : " + numberOfPlayers + " players");
         for (int i = 0; i < numberOfPlayers; i++) {
-            players.add(new Player("Player"+i,dice));
+            players.add(new Player("Player"+(i+1),dice));
         }
         play();
     }
 
     private void play() {
         int count = 0;
-        while (playerRanking.size() < players.size()) {
+        while (playerRanking.size() != 1) {
             count++;
             players.get(count % players.size()).rollDice(board);
         }
+        System.out.println("Player Won : "+playerRanking.get(0));
 
     }
 
