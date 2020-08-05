@@ -31,6 +31,9 @@ public class Game implements  Observer{
         while (playerRanking.size() != 1) {
             count++;
             players.get(count % players.size()).rollDice(board);
+            if(count % players.size() == 0){
+                players.forEach(System.out::println);
+            }
         }
         System.out.println("Player Won : "+playerRanking.get(0));
 
