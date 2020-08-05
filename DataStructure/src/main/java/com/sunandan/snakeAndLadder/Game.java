@@ -18,10 +18,10 @@ public class Game implements  Observer{
     }
 
 
-    void emulate() {
+    void emulate(Dice dice) {
         System.out.println("Game has started with : " + numberOfPlayers + " players");
         for (int i = 0; i < numberOfPlayers; i++) {
-            players.add(new Player());
+            players.add(new Player("Player"+i,dice));
         }
         play();
     }
@@ -37,8 +37,9 @@ public class Game implements  Observer{
 
     public static void main(String[] args) {
         int numberOfPlayers = Integer.parseInt(args[0]);
+        Dice dice = new Dice();
         Game game = new Game(numberOfPlayers);
-        game.emulate();
+        game.emulate(dice);
     }
 
 
