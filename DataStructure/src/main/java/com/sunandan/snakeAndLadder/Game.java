@@ -1,8 +1,6 @@
 package com.sunandan.snakeAndLadder;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Game implements  Observer{
 
@@ -12,9 +10,9 @@ public class Game implements  Observer{
     private Board board ;
     private int numberOfPlayers;
 
-    public Game(int numberOfPlayers) {
+    public Game(int numberOfPlayers, Map<Integer, Integer> snakes, Map<Integer, Integer> ladders) {
         this.numberOfPlayers = numberOfPlayers;
-        this.board = new Board(new Notifier(this));
+        this.board = new Board(new Notifier(this), snakes, ladders);
     }
 
 
@@ -40,9 +38,17 @@ public class Game implements  Observer{
     }
 
     public static void main(String[] args) {
+        Map<Integer, Integer> snakes = new HashMap<>();
+        snakes.put(12,5);
+        snakes.put(34,13);
+        snakes.put(44,17);
+        Map<Integer, Integer> ladders = new HashMap<>();
+        ladders.put(6,45);
+        ladders.put(14,53);
+        ladders.put(24,97);
         int numberOfPlayers = Integer.parseInt(args[0]);
         Dice dice = new Dice();
-        Game game = new Game(numberOfPlayers);
+        Game game = new Game(numberOfPlayers,snakes,ladders);
         game.emulate(dice);
     }
 
