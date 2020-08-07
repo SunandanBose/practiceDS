@@ -1,0 +1,93 @@
+ActiveUserRecord Service
+
+POST /visit
+    -> Database Update
+
+CRON 5 MINUTE
+    -> Query Database
+    -> ActiveUserService POST
+
+
+ServerLess ??
+
+Database
+ - Redis
+ - JavaScript
+
+
+ somebody create an event
+
+ mock Events -> 
+
+ /visit
+ TODO:
+     -> CRON outside ActiveUserRecordService
+     -> Database Update
+        -> ActiveUserRecord docker
+     // 1 hour
+     -> Redis username/password/hostname
+        -> Redis docker
+
+ generate SNS ??
+     -> Database Update
+     -> Redis username/password/hostname
+
+
+Why should i not install Redis rather than using a docker?
+
+docker-compose up
+    Provide endpoints to interact with each other
+
+    ActiveUserRecord Service -> image
+    Redis Service -> image
+
+nodejs install
+
+Kubernetes
+ECS ??ActiveUserRecord Service
+
+POST /visit
+    -> Database Update
+
+CRON 5 MINUTE
+    -> Query Database
+    -> ActiveUserService POST
+
+
+ServerLess ??
+
+Database
+ - Redis
+ - JavaScript
+
+
+ somebody create an event
+
+ mock Events -> 
+
+ /visit
+ TODO:
+     -> CRON outside ActiveUserRecordService
+     -> Database Update
+        -> ActiveUserRecord docker
+     // 1 hour
+     -> Redis username/password/hostname
+        -> Redis docker
+
+ generate SNS ??
+     -> Database Update
+     -> Redis username/password/hostname
+
+
+Why should i not install Redis rather than using a docker?
+
+docker-compose up
+    Provide endpoints to interact with each other
+
+    ActiveUserRecord Service -> image
+    Redis Service -> image
+
+nodejs install
+
+Kubernetes
+ECS ??
