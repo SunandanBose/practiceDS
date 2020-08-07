@@ -1,0 +1,18 @@
+//Show me the number of active users in my page at any point of time
+[GET /activeUsers]
+read data from server
+SERVER -> Spring Boot -> ActiveUsersService -> ActiveUserDB
+Listerner -> activeUsers Event -> ActiveUserDB
+
+Queue
+
+
+IncomingRequestMonitoringService - [POST /activeUsers]
+(Monitor incoming request hitting the server)
+
+activeUsers = calculateActiveUsers([IP, URL, REQUEST_TYPE])
+broadcast(activeUsers)
+
+
+Why is calculateActiveUsers doing in IncomingRequestMonitoringService?
+What is the need to store ActiveUsers data?

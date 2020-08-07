@@ -38,6 +38,8 @@ public class Game implements  Observer{
     }
 
     public static void main(String[] args) {
+        //TODO: game should not contain snake and ladder
+        //TODO: snake and ladder should be random
         Map<Integer, Integer> snakes = new HashMap<>();
         snakes.put(12,5);
         snakes.put(34,13);

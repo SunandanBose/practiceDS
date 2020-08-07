@@ -19,6 +19,7 @@ public class Board {
 
     public int getNextPosition(int prevPosition, int diceValue, Player player) {
         Integer finalValue = prevPosition + diceValue;
+        //TODO:  wrap snake and ladder in another method
         if (snakes.get(finalValue) != null) {
             System.out.println("OOPs!!!! Snake as bit you");
             return snakes.get(finalValue);
