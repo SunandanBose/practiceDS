@@ -1,3 +1,5 @@
+Diagram - https://app.diagrams.net/#G1Fh64W8sPWd7aeksvmh-jIGmvGa9NGSma
+
 ActiveUserRecord Service
 
 POST /visit
@@ -71,14 +73,18 @@ Database
 
  /visit
  TODO:
-     -> CRON outside ActiveUserRecordService
-     -> Rest API exposed on docker for [GET /activeUsers]
-     -> Database Update
-        -> ActiveUserRecord docker
-     // 1 hour
-     -> Create Redis username/password/hostname
-        -> Redis docker
+     -> Rest API exposed on docker for [GET /visit?pageId] 
+
+     -> ActiveUserProcessing docker [2]
+        -> Redis update
+     -> ActiveUser service in docker nodejs [3]
+        -> Rest API exposed on docker for [GET /activeUsers] 
+        -> Call ActiveUserRecord to get active users
+        -> Create local cache
+     -> Create Redis username/password/hostname. [1.1]
+        -> Redis docker [1.2]
      -> docker-compose with three images -> ActiveUser,ActiveUserRecord and Redis
+        -> Verify if they can interact with each other [4]
      -> Testing using mock data to see if things work 
 
 Why should i not install Redis rather than using a docker?
