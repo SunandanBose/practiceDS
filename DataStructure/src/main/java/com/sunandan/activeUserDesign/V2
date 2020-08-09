@@ -1,6 +1,6 @@
 Diagram - https://app.diagrams.net/#G1Fh64W8sPWd7aeksvmh-jIGmvGa9NGSma
 
-ActiveUserRecord Service
+ActiveUserProcessing Service
 
 POST /visit
     -> Database Update
@@ -23,9 +23,9 @@ Database
 
  /visit
  TODO:
-     -> CRON outside ActiveUserRecordService
+     -> CRON outside ActiveUserProcessingService
      -> Database Update
-        -> ActiveUserRecord docker
+        -> ActiveUserProcessing docker
      // 1 hour
      -> Redis username/password/hostname
         -> Redis docker
@@ -40,13 +40,13 @@ Why should i not install Redis rather than using a docker?
 docker-compose up
     Provide endpoints to interact with each other
 
-    ActiveUserRecord Service -> image
+    ActiveUserProcessing Service -> image
     Redis Service -> image
 
 nodejs install
 
 Kubernetes
-ECS ??ActiveUserRecord Service
+ECS ??ActiveUserProcessing Service
 
 POST /visit
     -> Database Update
@@ -73,17 +73,18 @@ Database
 
  /visit
  TODO:
-     -> Rest API exposed on docker for [GET /visit?pageId] 
-
      -> ActiveUserProcessing docker [2]
-        -> Redis update
+        -> Rest API for [POST /activeUser ]
+            -> Redis update with TTL
+        -> Rest API for [GET /visits?pageId]
+            -> Query Redis
      -> ActiveUser service in docker nodejs [3]
-        -> Rest API exposed on docker for [GET /activeUsers] 
-        -> Call ActiveUserRecord to get active users
+        -> Rest API for [GET /activeUsers] 
+        -> Call ActiveUserProcessing to get active users
         -> Create local cache
      -> Create Redis username/password/hostname. [1.1]
         -> Redis docker [1.2]
-     -> docker-compose with three images -> ActiveUser,ActiveUserRecord and Redis
+     -> docker-compose with three images -> ActiveUser,ActiveUserProcessing and Redis
         -> Verify if they can interact with each other [4]
      -> Testing using mock data to see if things work 
 
@@ -92,7 +93,7 @@ Why should i not install Redis rather than using a docker?
 docker-compose up
     Provide endpoints to interact with each other
 
-    ActiveUserRecord Service -> image
+    ActiveUserProcessing Service -> image
     Redis Service -> image
 
 nodejs install
