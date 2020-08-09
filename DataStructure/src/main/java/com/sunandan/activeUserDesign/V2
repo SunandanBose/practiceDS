@@ -54,12 +54,16 @@ CRON 5 MINUTE
     -> ActiveUserService POST
 
 
-ServerLess ??
+ServerLess:
+
+generate SNS ??
+     -> Database Update
+     -> Redis username/password/hostname
+
 
 Database
  - Redis
  - JavaScript
-
 
  somebody create an event
 
@@ -68,16 +72,14 @@ Database
  /visit
  TODO:
      -> CRON outside ActiveUserRecordService
+     -> Rest API exposed on docker for [GET /activeUsers]
      -> Database Update
         -> ActiveUserRecord docker
      // 1 hour
-     -> Redis username/password/hostname
+     -> Create Redis username/password/hostname
         -> Redis docker
-
- generate SNS ??
-     -> Database Update
-     -> Redis username/password/hostname
-
+     -> docker-compose with three images -> ActiveUser,ActiveUserRecord and Redis
+     -> Testing using mock data to see if things work 
 
 Why should i not install Redis rather than using a docker?
 
