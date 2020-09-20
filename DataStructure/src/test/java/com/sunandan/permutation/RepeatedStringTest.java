@@ -9,60 +9,60 @@ public class RepeatedStringTest {
     RepeatedString rs = new RepeatedString();
 
     @Test
-    public void test1MethodRepeatedString(){
+    public void test1MethodRepeatedString() {
         String input = "abab";
-        assertEquals(true,rs.repeatedSubstringPattern(input));
+        assertEquals(true, rs.repeatedSubstringPattern(input));
     }
 
     @Test
-    public void test2MethodRepeatedString(){
+    public void test2MethodRepeatedString() {
         String input = "aba";
-        assertEquals(false,rs.repeatedSubstringPattern(input));
+        assertEquals(false, rs.repeatedSubstringPattern(input));
     }
 
     @Test
-    public void test3MethodRepeatedString(){
+    public void test3MethodRepeatedString() {
         String input = "abcabcabcabc";
-        assertEquals(true,rs.repeatedSubstringPattern(input));
+        assertEquals(true, rs.repeatedSubstringPattern(input));
     }
 
     @Test
-    public void test4MethodRepeatedString(){
+    public void test4MethodRepeatedString() {
         String input = "abcab";
-        assertEquals(false,rs.repeatedSubstringPattern(input));
+        assertEquals(false, rs.repeatedSubstringPattern(input));
     }
 
 
     // Recursion
 
     @Test
-    public void test1MethodRepeatedStringUsingRecursion(){
+    public void test1MethodRepeatedStringUsingRecursion() {
         String input = "ababab";
-        assertEquals(true,rs.repeatedSubstringPatternUsingRecursion(input));
+        assertEquals(true, rs.repeatedSubstringPatternUsingRecursion(input));
     }
 
     @Test
-    public void test2MethodRepeatedStringUsingRecursion(){
+    public void test2MethodRepeatedStringUsingRecursion() {
         String input = "abab";
-        assertEquals(true,rs.repeatedSubstringPatternUsingRecursion(input));
+        assertEquals(true, rs.repeatedSubstringPatternUsingRecursion(input));
     }
 
     @Test
-    public void test3MethodRepeatedStringUsingRecursion(){
+    public void test3MethodRepeatedStringUsingRecursion() {
         String input = "aba";
-        assertEquals(false,rs.repeatedSubstringPatternUsingRecursion(input));
+        assertEquals(false, rs.repeatedSubstringPatternUsingRecursion(input));
     }
 
     @Test
-    public void test4MethodRepeatedStringUsingRecursion(){
+    public void test4MethodRepeatedStringUsingRecursion() {
         String input = "abcab";
-        assertEquals(false,rs.repeatedSubstringPatternUsingRecursion(input));
+        assertEquals(false, rs.repeatedSubstringPatternUsingRecursion(input));
     }
 
     @Test
-    public void test5MethodRepeatedStringUsingRecursion(){
+    public void test5MethodRepeatedStringUsingRecursion() {
         String input = "abcabc";
-        assertEquals(true,rs.repeatedSubstringPatternUsingRecursion(input));
+        assertEquals(true, rs.repeatedSubstringPatternUsingRecursion(input));
     }
 
 }
