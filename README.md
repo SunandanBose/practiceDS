@@ -37,4 +37,5 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 30 | All Elements in Two Binary Search Trees |[Explanation](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)| [Code](DataStructure/src/main/java/com/sunandan/tree/AllElementsInTwoBinarySearchTrees.java)|[Test](DataStructure/src/test/java/com/sunandan/tree/AllElementsInTwoBinarySearchTreesTest.java )||
 31 | Invert Binary Tree |[Explanation](https://leetcode.com/problems/invert-binary-tree/)| [Code](DataStructure/src/main/java/com/sunandan/tree/InvertBinaryTree.java)|[Test](DataStructure/src/test/java/com/sunandan/tree/InvertBinaryTreeTest.java)||
 32 | Binary Tree Right Side View |[Explanation](https://leetcode.com/problems/binary-tree-right-side-view/)| [Code](DataStructure/src/main/java/com/sunandan/tree/View.java)|[Test](DataStructure/src/test/java/com/sunandan/tree/ViewTest.java)||
+33 | Word Search II |[Explanation](https://leetcode.com/problems/word-search-ii/)| [Code](DataStructure/src/main/java/com/sunandan/Trie/WordSearch.java)|[Test](DataStructure/src/test/java/com/sunandan/Trie/WordSearchTest.java)||
 
