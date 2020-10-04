@@ -38,4 +38,4 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 31 | Invert Binary Tree |[Explanation](https://leetcode.com/problems/invert-binary-tree/)| [Code](DataStructure/src/main/java/com/sunandan/tree/InvertBinaryTree.java)|[Test](DataStructure/src/test/java/com/sunandan/tree/InvertBinaryTreeTest.java)||
 32 | Binary Tree Right Side View |[Explanation](https://leetcode.com/problems/binary-tree-right-side-view/)| [Code](DataStructure/src/main/java/com/sunandan/tree/View.java)|[Test](DataStructure/src/test/java/com/sunandan/tree/ViewTest.java)||
 33 | Word Search II |[Explanation](https://leetcode.com/problems/word-search-ii/)| [Code](DataStructure/src/main/java/com/sunandan/Trie/WordSearch.java)|[Test](DataStructure/src/test/java/com/sunandan/Trie/WordSearchTest.java)||
-
+34 | Minimum Window Substring |[Explanation](https://leetcode.com/problems/minimum-window-substring/)| [Code](DataStructure/src/main/java/com/sunandan/permutation/MinimumWindowSubstring.java)|[Test](DataStructure/src/test/java/com/sunandan/permutation/MinimumWindowSubstringTest.java)||
