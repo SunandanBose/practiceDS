@@ -15,12 +15,12 @@ public class MyDeQueueTest {
     }
 
     @Test
-    public void isEmpty() {
+    public void testIsEmpty() {
         assertEquals(true, myDeQueue.isEmpty());
     }
 
     @Test
-    public void add() {
+    public void testAdd() {
         myDeQueue.add(2);
         myDeQueue.add(3);
         String expected = "[2, 3]";
@@ -28,7 +28,7 @@ public class MyDeQueueTest {
     }
 
     @Test
-    public void addFirst() {
+    public void testAddFirst() {
         myDeQueue.addFirst(2);
         myDeQueue.addFirst(3);
         String expected = "[3, 2]";
@@ -36,7 +36,7 @@ public class MyDeQueueTest {
     }
 
     @Test
-    public void addLast() {
+    public void testAddLast() {
         myDeQueue.addLast(2);
         myDeQueue.addLast(4);
         String expected = "[2, 4]";
@@ -44,7 +44,7 @@ public class MyDeQueueTest {
     }
 
     @Test
-    public void removeFirst() {
+    public void testRemoveFirst() {
         myDeQueue.addLast(2);
         myDeQueue.addLast(4);
         myDeQueue.removeFirst();
@@ -53,7 +53,7 @@ public class MyDeQueueTest {
     }
 
     @Test
-    public void removeLast() {
+    public void testRemoveLast() {
         myDeQueue.addLast(2);
         myDeQueue.addLast(4);
         myDeQueue.removeLast();
@@ -62,18 +62,36 @@ public class MyDeQueueTest {
     }
 
     @Test
-    public void remove() {
+    public void testRemove() {
         myDeQueue.addLast(5);
         myDeQueue.addLast(4);
-        myDeQueue.removeLast();
-        String expected = "[5]";
+        myDeQueue.remove();
+        String expected = "[4]";
         assertEquals(expected, myDeQueue.toString());
     }
 
     @Test
-    public void size(){
+    public void testSize(){
         myDeQueue.addLast(5);
         myDeQueue.addLast(4);
         assertEquals(2, myDeQueue.size());
+    }
+
+    @Test
+    public void testPeekFirst(){
+        myDeQueue.addLast(5);
+        myDeQueue.addLast(4);
+        int expected = 5;
+        int actual = myDeQueue.peekFirst();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPeekLast(){
+        myDeQueue.addLast(5);
+        myDeQueue.addLast(4);
+        int expected = 4;
+        int actual = myDeQueue.peekLast();
+        assertEquals(expected, actual);
     }
 }

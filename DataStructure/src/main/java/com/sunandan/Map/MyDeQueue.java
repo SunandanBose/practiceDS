@@ -89,6 +89,22 @@ public class MyDeQueue<T> {
         tail = null;
     }
 
+    public T peekFirst(){
+        DeQueueNode<T> first = head;
+        if (first == null)
+            throw new NoSuchElementException();
+        T elem = first.value;
+        return elem;
+    }
+
+    public T peekLast(){
+        DeQueueNode<T> last = tail;
+        if (last == null)
+            throw new NoSuchElementException();
+        T elem = last.value;
+        return elem;
+    }
+
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder("");
