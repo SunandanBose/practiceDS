@@ -11,7 +11,7 @@ public class MinimumSubArrayTest {
     @Test
     public void test1MinSubArrayLen() {
         int inputSum = 7;
-        int[] inputArray = {2,3,1,2,4,3};
+        int[] inputArray = {2, 3, 1, 2, 4, 3};
         assertEquals(2, minimumSubArray.minSubArrayLen(inputSum, inputArray));
     }
 
@@ -32,7 +32,7 @@ public class MinimumSubArrayTest {
     @Test
     public void test4MinSubArrayLen() {
         int inputSum = 4;
-        int[] inputArray = {1,4,4};
+        int[] inputArray = {1, 4, 4};
         assertEquals(1, minimumSubArray.minSubArrayLen(inputSum, inputArray));
     }
 }

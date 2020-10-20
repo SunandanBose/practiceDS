@@ -3,8 +3,6 @@ package com.sunandan.Random;
 import java.util.HashMap;
 import java.util.Map;
 
-
-//https://leetcode.com/problems/single-number/
 public class SingleNumber {
 
     public int singleNumber(int[] nums) {
