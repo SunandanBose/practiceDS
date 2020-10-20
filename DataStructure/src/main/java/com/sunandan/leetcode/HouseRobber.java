@@ -1,9 +1,8 @@
 package com.sunandan.leetcode;
 
-//https://leetcode.com/problems/house-robber/
 public class HouseRobber {
 
-    public static int rob(int[] nums) {
+    public int rob(int[] nums) {
         int ifCurrentPreviousRobbed = 0;
         int ifCurrentPreviousNotRoobed = 0;
 

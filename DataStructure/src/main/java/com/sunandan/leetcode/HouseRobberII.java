@@ -7,7 +7,7 @@ public class HouseRobberII {
         return Math.max(rob(nums, 0, nums.length - 1), rob(nums, 1, nums.length));
     }
 
-    public static int rob(int[] nums, int start, int end) {
+    private static int rob(int[] nums, int start, int end) {
         int ifCurrentPreviousRobbed = 0;
         int ifCurrentPreviousNotRobbed = 0;
         for (int i = start; i < end; i++) {

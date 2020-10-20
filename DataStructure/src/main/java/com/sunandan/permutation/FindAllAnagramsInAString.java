@@ -3,7 +3,6 @@ package com.sunandan.permutation;
 import java.util.ArrayList;
 import java.util.List;
 
-//https://leetcode.com/problems/find-all-anagrams-in-a-string/
 public class FindAllAnagramsInAString {
 
     public List<Integer> findAnagrams(String s, String p) {
@@ -20,7 +19,6 @@ public class FindAllAnagramsInAString {
         int left = 0, right = 0, count = p.length();
 
         while (right < s.length()) {
-            System.out.println(left + " : " + right + " : " + count);
             if (hash[s.charAt(right)] >= 1) {
                 count--;
             }

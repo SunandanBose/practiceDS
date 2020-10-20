@@ -1,7 +1,7 @@
 package com.sunandan.permutation;
 
 
-//https://leetcode.com/problems/first-unique-character-in-a-string/
+
 public class FirstUniqueCharacterInAString {
 
     public int firstUniqChar(String s) {
