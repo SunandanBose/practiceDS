@@ -1,6 +1,8 @@
 package com.sunandan.google;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class PalindromePartitioning {
 
@@ -32,6 +34,30 @@ public class PalindromePartitioning {
             minPartitionRequired[i] = min;
         }
         return minPartitionRequired[input.length() - 1];
+    }
+
+
+    // better solution
+    public int minCut(String s) {
+        List<Integer> result = new ArrayList<Integer>();
+        if(s.length() == 1) return 0;
+        if(isPalindrome(s)) return 0;
+        for(int i = 1; i < s.length(); i++)    {
+            int l = minCut(s.substring(0,i));
+            int r = minCut(s.substring(i));
+            result.add(l + 1 + r);
+        }
+        return result.stream().reduce((x, y) -> x.compareTo(y) <= 0  ? x : y).get();
+        //return result.stream().min(Integer::valueOf).get();
+
+    }
+
+    private boolean isPalindrome(String input){
+        for(int i = 0; i< (input.length()/2); i++){
+            if(input.charAt(i) != input.charAt(input.length()-1-i))
+                return false;
+        }
+        return true;
     }
 
     //If you still fail to recall the logic follow the video

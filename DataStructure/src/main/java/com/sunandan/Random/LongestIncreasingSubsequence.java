@@ -36,4 +36,22 @@ public class LongestIncreasingSubsequence {
         return piles.size();
     }
 
+    private int[] dp = null;
+    public int lengthOfLISDP(int[] nums) {
+        dp = new int[nums.length];
+        dp[0] = 1;
+        int max = 0;
+        for(int i = 1; i < nums.length ; i++){
+            int len = 0;
+            for(int j = 0 ; j < i; j++){
+                if(nums[i]>nums[j]){
+                    len = Math.max(len, dp[j]);
+                }
+            }
+            dp[i] = len+1;
+            max = Math.max(dp[i], max);
+        }
+        return max;
+    }
+
 }

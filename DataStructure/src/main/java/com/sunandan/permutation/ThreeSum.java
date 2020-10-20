@@ -9,9 +9,7 @@ public class ThreeSum {
         if (nums.length < 3) {
             return Collections.emptyList();
         }
-        System.out.println(Arrays.toString(nums));
         Arrays.sort(nums);
-        System.out.println(Arrays.toString(nums));
         for (int i = 0; i < nums.length - 2; i++) {
             int j = i + 1;
             int k = nums.length - 1;
