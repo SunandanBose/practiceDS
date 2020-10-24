@@ -43,10 +43,11 @@ class LList{
 	    	return true;
 	    }
 		
-	    static Node insert(List<Integer> list){
-	    	Node head = new Node(1);
+	    public static Node insert(List<Integer> list){
+			if(list == null || list.size() == 0) return null;
+	    	Node head = new Node(list.get(0));
 			Node temp = head;
-			for (int i = 0;i < 6 ;i+=1) {
+			for (int i = 1;i < list.size() ;i+=1) {
 			    Node node =  new Node(list.get(i));
 			    node.next = null;
 			    temp.next = node;
@@ -92,6 +93,15 @@ class LList{
 	    	}
 	    	return head;
 	    }
+
+	    public static List<Integer> getList(Node head){
+			List<Integer> result = new ArrayList<>();
+			while(head != null){
+				result.add(head.data);
+				head = head.next;
+			}
+			return result;
+		}
 
 		public static void main(String[] args) {
 		Node head =  insert(Arrays.asList(2,3,4,3,2,1));
