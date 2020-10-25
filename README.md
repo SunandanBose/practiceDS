@@ -75,3 +75,7 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 68 | Populating Next Right Pointers in Each Node |[Explanation](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)| [Code](DataStructure/src/main/java/com/sunandan/tree/PopulatingNextRightPointersInEachNode.java)|||
 69 | Binary Tree Zigzag Level Order Traversal |[Explanation](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)| [Code](DataStructure/src/main/java/com/sunandan/tree/ZigZagTree.java)|||
 70 | Letter Combinations of a Phone Number |[Explanation](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| [Code](DataStructure/src/main/java/com/sunandan/Random/LetterCombinationsOfAPhoneNumber.java)|||
+71 | Find First and Last Position of Element in Sorted Array |[Explanation](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)| [Code](DataStructure/src/main/java/com/sunandan/Random/FindFirstAndLastPositionOfElementInSortedArray.java)|||
+72 | Find Peak Element |[Explanation](https://leetcode.com/problems/find-peak-element/)| [Code](DataStructure/src/main/java/com/sunandan/Random/FindPeakElement.java)|||
+73 | Search a 2D Matrix II |[Explanation](https://leetcode.com/problems/search-a-2d-matrix-ii/)| [Code](DataStructure/src/main/java/com/sunandan/Random/Search2DMatrixII.java)|||
+74 | Top K Frequent Elements |[Explanation](https://leetcode.com/problems/top-k-frequent-elements/)| [Code](DataStructure/src/main/java/com/sunandan/heap/TopKFrequentElements.java)|||
