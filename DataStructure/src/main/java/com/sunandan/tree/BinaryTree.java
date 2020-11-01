@@ -19,6 +19,18 @@ public class BinaryTree{
 		printPreOrder(root.left);
 		printPreOrder(root.right);
 	}
+
+	public boolean isValidBST(Node root) {
+		return isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+	}
+
+	private boolean isValidBST(Node root, int min, int max){
+		if(root == null){
+			return true;
+		}
+		if(root.data < min || root.data > max) return false;
+		return isValidBST(root.left, min, root.data) && isValidBST(root.right, root.data, max);
+	}
 	public static void main(String args[]){
 		BinaryTree b=new BinaryTree();
 		int[] arr = {1,2,3,4,5,6,7};
