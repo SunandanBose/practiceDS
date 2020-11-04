@@ -80,3 +80,4 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 73 | Search a 2D Matrix II |[Explanation](https://leetcode.com/problems/search-a-2d-matrix-ii/)| [Code](DataStructure/src/main/java/com/sunandan/Random/Search2DMatrixII.java)|||
 74 | Top K Frequent Elements |[Explanation](https://leetcode.com/problems/top-k-frequent-elements/)| [Code](DataStructure/src/main/java/com/sunandan/heap/TopKFrequentElements.java)|||
 75 | Subtree of Another Tree |[Explanation](https://leetcode.com/problems/subtree-of-another-tree/)| [Code](DataStructure/src/main/java/com/sunandan/tree/SubtreeOfAnotherTree.java)|||
+76 | Course Schedule |[Explanation](https://leetcode.com/problems/course-schedule/)| [Code](DataStructure/src/main/java/com/sunandan/graph/CourseSchedule.java)|||
