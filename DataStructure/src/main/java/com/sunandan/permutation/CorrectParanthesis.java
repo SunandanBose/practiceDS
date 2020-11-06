@@ -26,7 +26,7 @@ public class CorrectParanthesis {
 		return result;
 	}
 
-	private static boolean checkParanthesis(String input){
+	public static boolean checkParanthesis(String input){
 		Stack<Character> stack = new Stack();
 		for(int i=0;i<input.length();i++){
 			if(input.charAt(i) == '(')

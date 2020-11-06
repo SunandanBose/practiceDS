@@ -83,3 +83,4 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 76 | Course Schedule |[Explanation](https://leetcode.com/problems/course-schedule/)| [Code](DataStructure/src/main/java/com/sunandan/graph/CourseSchedule.java)|||
 77 | Implement Trie (Prefix Tree) |[Explanation](https://leetcode.com/problems/implement-trie-prefix-tree/)| [Code](DataStructure/src/main/java/com/sunandan/Trie/Trie.java)|[Test](DataStructure/src/test/java/com/sunandan/Trie/TrieTest.java)||
 78 | Trapping Rain Water |[Explanation](https://leetcode.com/problems/trapping-rain-water/)| [Code](DataStructure/src/main/java/com/sunandan/Random/TrappingRainWater.java)|||
+79 | Diameter of Binary Tree |[Explanation](https://leetcode.com/problems/diameter-of-binary-tree/)| [Code](DataStructure/src/main/java/com/sunandan/tree/DiameterOfTree.java)|||
