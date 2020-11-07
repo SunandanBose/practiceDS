@@ -84,3 +84,7 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 77 | Implement Trie (Prefix Tree) |[Explanation](https://leetcode.com/problems/implement-trie-prefix-tree/)| [Code](DataStructure/src/main/java/com/sunandan/Trie/Trie.java)|[Test](DataStructure/src/test/java/com/sunandan/Trie/TrieTest.java)||
 78 | Trapping Rain Water |[Explanation](https://leetcode.com/problems/trapping-rain-water/)| [Code](DataStructure/src/main/java/com/sunandan/Random/TrappingRainWater.java)|||
 79 | Diameter of Binary Tree |[Explanation](https://leetcode.com/problems/diameter-of-binary-tree/)| [Code](DataStructure/src/main/java/com/sunandan/tree/DiameterOfTree.java)|||
+80 | Diameter of Binary Tree |[Explanation](https://leetcode.com/problems/longest-valid-parentheses/)| [Code](DataStructure/src/main/java/com/sunandan/tree/DiameterOfTree.java)|||
+81 | Copy List with Random Pointer |[Explanation](https://leetcode.com/problems/copy-list-with-random-pointer/)| [Code](DataStructure/src/main/java/com/sunandan/LinkedList/CopyListWithRandomPointer.java)|||
+82 | Clone a Binary Tree |[Explanation](https://practice.geeksforgeeks.org/problems/clone-a-binary-tree/)| [Code](DataStructure/src/main/java/com/sunandan/tree/CloneBinaryTree.java)|||
+83 | Longest Chunked Palindrome Decomposition |[Explanation](https://leetcode.com/problems/longest-chunked-palindrome-decomposition/)| [Code](DataStructure/src/main/java/com/sunandan/permutation/LongestChunkedPalindromeDecomposition.java)|||
