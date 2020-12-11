@@ -95,4 +95,5 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 88 |  Reverse Words in a String |[Explanation](https://leetcode.com/problems/reverse-words-in-a-string/)| [Code](DataStructure/src/main/java/com/sunandan/permutation/ReverseWordsInAString.java)|||
 89 |  Container With Most Water |[Explanation](https://leetcode.com/problems/container-with-most-water/)| [Code](DataStructure/src/main/java/com/sunandan/Random/ContainerWithMostWater.java)|||
 90 |  Product Of Array Except Self |[Explanation](https://leetcode.com/problems/product-of-array-except-self/)| [Code](DataStructure/src/main/java/com/sunandan/Random/ProductOfArrayExceptSelf.java)|||
-90 |  Palindeome Partitioning I |[Explanation](https://leetcode.com/problems/palindrome-partitioning/)| [Code](DataStructure/src/main/java/com/sunandan/leetcode/PalindromePartitioning.java)|||
+91 |  Palindeome Partitioning I |[Explanation](https://leetcode.com/problems/palindrome-partitioning/)| [Code](DataStructure/src/main/java/com/sunandan/leetcode/PalindromePartitioning.java)|||
+92 |  Perfect Squares |[Explanation](https://leetcode.com/problems/perfect-squares/)| [Code](DataStructure/src/main/java/com/sunandan/Random/PerfectSquares.java)|||
