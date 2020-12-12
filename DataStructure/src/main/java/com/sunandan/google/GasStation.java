@@ -16,7 +16,9 @@ public class GasStation {
                 gasAvailable = 0;
             }
         }
-        return gasShortage > gasAvailable ? -1 : startStation;
+//         return gasShortage > gasAvailable ? -1 : startStation;
+        // if the gasAvailable = gasShortage = 0, start station was coming as -1
+        return gasShortage > gasAvailable ? -1 : startStation == -1 ? 0 : startStation;
     }
 
 }
