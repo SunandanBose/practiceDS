@@ -100,3 +100,4 @@ Sl. No.| Problem Name                       | Problem Explanation | Solution1 | 
 93 |  Coin Chain Get Minimum Count |[Explanation](https://leetcode.com/problems/coin-change/)| [Code](DataStructure/src/main/java/com/sunandan/permutation/CoinChainGetMinimumCount.java)|||
 94 |  All Paths From Source to Target |[Explanation](https://leetcode.com/problems/all-paths-from-source-to-target/)| [Code](DataStructure/src/main/java/com/sunandan/backtracking/AllPathsFromSourceToTarget.java)|||
 95 |  Letter Tile Possibilities |[Explanation](https://leetcode.com/problems/letter-tile-possibilities/)| [Code](DataStructure/src/main/java/com/sunandan/backtracking/LetterTilePossibilities.java)|||
+96 |  Count Sorted Vowel Strings |[Explanation](https://leetcode.com/problems/count-sorted-vowel-strings/)| [Code](DataStructure/src/main/java/com/sunandan/leetcode/CountSortedVowelStrings.java)|||
