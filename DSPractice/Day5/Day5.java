@@ -5,14 +5,22 @@ public class Day5 {
 
     public static void main(String[] args) {
         Day5 day5 = new Day5();
+        final long startTime = System.currentTimeMillis();
         System.out.println(day5.isInterleave("aabcc", "dbbca", "aadbbbaccc"));
         System.out.println(day5.isInterleave("aabcc", "dbbca", "aadbbcbcac"));
+        System.out.println(day5.isInterleave("aa", "ab", "abaa"));
         System.out.println(day5.isInterleave("cbcccbabbccbbcccbbbcabbbabcababbbbbbaccaccbabbaacbaabbbc",
-                "abcbbcaababccacbaaaccbabaabbaaabcbababbcccbbabbbcbbb",
-                "abcbcccbacbbbbccbcbcacacbbbbacabbbabbcacbcaabcbaaacbcbbbabbbaacacbbaaaabccbcbaabbbaaabbcccbcbabababbbcbbbcbb"));
+        "abcbbcaababccacbaaaccbabaabbaaabcbababbcccbbabbbcbbb",
+        "abcbcccbacbbbbccbcbcacacbbbbacabbbabbcacbcaabcbaaacbcbbbabbbaacacbbaaaabccbcbaabbbaaabbcccbcbabababbbcbbbcbb"));
+        final long endTime = System.currentTimeMillis();
+        System.out.println("Total execution time: " + (endTime - startTime));
     }
 
+    Map<String, Boolean> cache = new HashMap<>();
+
     public boolean isInterleave(String s1, String s2, String s3) {
+        if (cache.get(s1 + "|" + s2 + "|" + s3) != null)
+            return cache.get(s1 + "|" + s2 + "|" + s3);
         boolean string1Result = false;
         boolean string2Result = false;
         if (s1.length() == 0 && s2.length() == 0 && s3.length() == 0)
@@ -29,6 +37,7 @@ public class Day5 {
             int index = 1;
             string2Result = isInterleave(s1, s2.substring(index), s3.substring(index));
         }
+        cache.put(s1 + "|" + s2 + "|" + s3, string1Result || string2Result);
         return string1Result || string2Result ? true : false;
     }
 
