@@ -1,6 +1,8 @@
 package com.sunandan.leetcode;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class AlienDictionary {
 
@@ -15,12 +17,11 @@ public class AlienDictionary {
 
         Map<Character, List<Character>> map = new HashMap<>();
 
-        Set<Character> letters = new HashSet<>();
-        for(String s : words){
-            for(char c : s.toCharArray()){
-                letters.add(c);
-            }
-        }
+        List<String> letters = Stream.of(words)
+                .map(w -> w.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .collect(Collectors.toList());
 
         int[] indg = new int[26];
 
@@ -44,7 +45,8 @@ public class AlienDictionary {
         }
         PriorityQueue<Character> pq = new PriorityQueue<>();
 
-        for(Character c : letters){
+        for(String str : letters){
+            Character c = str.charAt(0);
             if(indg[c-'a'] == 0) pq.offer(c);
         }
 
