@@ -11,5 +11,6 @@ def add_separator(input: str) -> str:
 		count = count + 1
 
 	print(result[::-1])
+	return result[::-1]
 
 add_separator(sys.argv[1])
