@@ -8,3 +8,4 @@
 .vscode
 **/**.pyc
 python/env/
+python/revision
