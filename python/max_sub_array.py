@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/maximum-subarray/submissions/
+# Also called kadane's algorithm
 
 # Initialise to first element the sums
 # In the case of a negative number if it reduces the sum to be less than the number itself then
