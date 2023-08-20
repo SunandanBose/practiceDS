@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/first-unique-character-in-a-string/description/
+
 def first_non_repeating_character(text):
     char_count = {}
     for char in text:
