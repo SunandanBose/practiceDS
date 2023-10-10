@@ -13,5 +13,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 6 | Decode Ways  | [Explanation](https://leetcode.com/problems/decode-ways/)| [Code](DecodeWays.java)| |
 7 | Validate BST  | [Explanation](https://leetcode.com/problems/validate-binary-search-tree/)| [Code](ValidateBST.java)| |
 8 | Symmetric Tree  | [Explanation](https://leetcode.com/problems/symmetric-tree/)| [Code](SymmetricTree.java)| |
-9 | Maximum Depth of Binary Tree
-  | [Explanation](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| [Code](MaximumDepthOfBinaryTree.java)| |
+9 | Maximum Depth of Binary Tree| [Explanation](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| [Code](MaximumDepthOfBinaryTree.java)| |
