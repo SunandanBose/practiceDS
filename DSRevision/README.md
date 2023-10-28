@@ -14,3 +14,6 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 7 | Validate BST  | [Explanation](https://leetcode.com/problems/validate-binary-search-tree/)| [Code](ValidateBST.java)| |
 8 | Symmetric Tree  | [Explanation](https://leetcode.com/problems/symmetric-tree/)| [Code](SymmetricTree.java)| |
 9 | Maximum Depth of Binary Tree| [Explanation](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| [Code](MaximumDepthOfBinaryTree.java)| |
+10 | Longest Consequtive Sequence | [Explanation](https://leetcode.com/problems/longest-consecutive-sequence/)| [Code](LongestConsecutiveSequence.java) | |
+11 | Valid Palindrome | [Explanation](https://leetcode.com/problems/valid-palindrome/)| [Code](ValidPalindrome.java) | |
+12 | Valid Palindrome II | [Explanation](https://leetcode.com/problems/valid-palindrome-ii/)| [Code](ValidPalindromeII.java) | |
