@@ -17,3 +17,5 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 10 | Longest Consequtive Sequence | [Explanation](https://leetcode.com/problems/longest-consecutive-sequence/)| [Code](LongestConsecutiveSequence.java) | |
 11 | Valid Palindrome | [Explanation](https://leetcode.com/problems/valid-palindrome/)| [Code](ValidPalindrome.java) | |
 12 | Valid Palindrome II | [Explanation](https://leetcode.com/problems/valid-palindrome-ii/)| [Code](ValidPalindromeII.java) | |
+13 | Merge Sorted Array | [Explanation](https://leetcode.com/problems/merge-sorted-array/)| [Code](MergeSortedArray.java) | |
+14 | Remove Element | [Explanation](https://leetcode.com/problems/remove-element/)| [Code](RemoveElements.java) | |
