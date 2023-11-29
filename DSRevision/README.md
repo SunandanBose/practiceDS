@@ -20,3 +20,6 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 13 | Merge Sorted Array | [Explanation](https://leetcode.com/problems/merge-sorted-array/)| [Code](MergeSortedArray.java) | |
 14 | Remove Element | [Explanation](https://leetcode.com/problems/remove-element/)| [Code](RemoveElements.java) | |
 15 | Remove Duplicates from Sorted Array II | [Explanation](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)| [Code](RemoveDuplicatesSortedArrayII.java) | |
+16 | Majority Element | [Explanation](https://leetcode.com/problems/majority-element/)| [Code](MajorityElements.java) | |
+17 | Rotate Array | [Explanation](https://leetcode.com/problems/rotate-array/)| [Code](RotateArray.java) | |
+
