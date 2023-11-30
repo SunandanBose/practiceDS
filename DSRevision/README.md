@@ -25,4 +25,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 18 | Best Time to Buy and Sell Stock | [Explanation](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| [Code](BestTimeToBuyAndSellStock.java) | |
 19 | Best Time to Buy and Sell Stock II | [Explanation](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Code](BestTimeToBuyAndSellStockII.java) | |
 20 | Length of Last Word | [Explanation](https://leetcode.com/problems/length-of-last-word/)| [Code](LengthOfLastWord.java) | |
-21 | Longest Common Prefix | [Explanation](https://leetcode.com/problems/longest-common-prefix/)| [Code](LengthOfLastWord.java) | |
+21 | Longest Common Prefix | [Explanation](https://leetcode.com/problems/longest-common-prefix/)| [Code](LongestCommonPrefix.java) | |
