@@ -22,4 +22,7 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 15 | Remove Duplicates from Sorted Array II | [Explanation](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)| [Code](RemoveDuplicatesSortedArrayII.java) | |
 16 | Majority Element | [Explanation](https://leetcode.com/problems/majority-element/)| [Code](MajorityElements.java) | |
 17 | Rotate Array | [Explanation](https://leetcode.com/problems/rotate-array/)| [Code](RotateArray.java) | |
+18 | Best Time to Buy and Sell Stock | [Explanation](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| [Code](BestTimeToBuyAndSellStock.java) | |
+19 | Best Time to Buy and Sell Stock II | [Explanation](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Code](BestTimeToBuyAndSellStockII.java) | |
 
+    
