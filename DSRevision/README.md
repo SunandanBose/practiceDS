@@ -26,3 +26,6 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 19 | Best Time to Buy and Sell Stock II | [Explanation](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| [Code](BestTimeToBuyAndSellStockII.java) | |
 20 | Length of Last Word | [Explanation](https://leetcode.com/problems/length-of-last-word/)| [Code](LengthOfLastWord.java) | |
 21 | Longest Common Prefix | [Explanation](https://leetcode.com/problems/longest-common-prefix/)| [Code](LongestCommonPrefix.java) | |
+22 | Rotate List | [Explanation](https://leetcode.com/problems/rotate-list/)| [Code](RotateList.java) | |
+23 | Group Anagrams | [Explanation](https://leetcode.com/problems/group-anagrams/)| [Code](GroupAnagrams.java) | |
+
