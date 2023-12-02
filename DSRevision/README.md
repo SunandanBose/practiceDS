@@ -28,4 +28,11 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 21 | Longest Common Prefix | [Explanation](https://leetcode.com/problems/longest-common-prefix/)| [Code](LongestCommonPrefix.java) | |
 22 | Rotate List | [Explanation](https://leetcode.com/problems/rotate-list/)| [Code](RotateList.java) | |
 23 | Group Anagrams | [Explanation](https://leetcode.com/problems/group-anagrams/)| [Code](GroupAnagrams.java) | |
+24 | Valid Paranthesis | [Explanation](https://leetcode.com/problems/valid-parentheses/)| [Code](ValidParanthesis.java) | |
+25 | Is Subsequence | [Explanation](https://leetcode.com/problems/is-subsequence/)| [Code](IsSubsequence.java) | |
+26 | Two Sum II - Input Array Is Sorted
+ | [Explanation](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| [Code](TwoSumIIInputArrayIsSorted.java) | |
+27 | Container With Most Water
+ | [Explanation](https://leetcode.com/problems/container-with-most-water/)| [Code](ContainerWithMostWater.java) | |
+
 
