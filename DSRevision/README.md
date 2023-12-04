@@ -32,5 +32,6 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 25 | Is Subsequence | [Explanation](https://leetcode.com/problems/is-subsequence/)| [Code](IsSubsequence.java) | |
 26 | Two Sum II - Input Array Is Sorted | [Explanation](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| [Code](TwoSumIIInputArrayIsSorted.java) | |
 27 | Container With Most Water | [Explanation](https://leetcode.com/problems/container-with-most-water/)| [Code](ContainerWithMostWater.java) | |
-
+28 | Minimum Size Subarray Sum | [Explanation](https://leetcode.com/problems/minimum-size-subarray-sum/)| [Code](MinimumSizeSubarraySum.java) | |
+29 | Min Stack | [Explanation](https://leetcode.com/problems/min-stack/)| [Code](MinStack.java) | |
 
