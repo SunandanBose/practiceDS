@@ -1,0 +1,11 @@
+/.metadata/
+/.recommenders/
+**/**.class
+*.class
+.DS_Store
+**/.DS_Store
+/.vscode/
+.vscode
+**/**.pyc
+python/env/
+python/revision

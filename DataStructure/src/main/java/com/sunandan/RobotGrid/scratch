@@ -1,0 +1,24 @@
+1	1 	1	1
+1 	1 X	1 	1
+1 	1 X 1	1
+
+stack = 00
+while(stack!=empty){
+	if(root.hasDown)
+		stack.pushdown;
+	else{
+		if(root.hasRight)
+			stack.pushright
+		else
+			grid = X
+			stack.pop	
+	}
+	iif(root == grid.end)
+		break;	
+
+}
+
+Default -> Down
+R -> If no down / If pop
+pop -> If no right
+deadlock -> if no pop/if no right

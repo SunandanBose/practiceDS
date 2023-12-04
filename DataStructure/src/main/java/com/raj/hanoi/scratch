@@ -1,0 +1,20 @@
+3 Stack
+1 disk move
+larger disk cannot be on top of smaller disk
+
+
+
+
+   						 1
+   					 	 2
+   						 3
+   						 4
+   						 5
+stack1  	stack2		stack 3
+
+
+pop from stack1 and put to next possible - (Should be empty or should be less than last element in stack)
+move right from current stack
+check if possible -> move -> top to right 
+if not possible -> next stack
+when stack1 and stack 2 are empty

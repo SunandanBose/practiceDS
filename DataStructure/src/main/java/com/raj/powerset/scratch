@@ -1,0 +1,21 @@
+['', 'a', 'b', 'ba', 'c', 'ca', 'cb', 'cba', 'd', 'da', 'db', 'dba', 'dc', 'dca', 'dcb', 'dcba']
+
+
+f(null) = ''
+f(a) = each f(null) * f(a)
+f(b) = each f(a) * b
+
+[a, b, c]
+
+func(element, array){
+	array.map(e => e + element)
+}
+
+result = ['']
+func(array, element) => {
+	if (element == array.last){
+		return result;
+	}
+	result = result.map(e => e + element)
+	func(array, nextElement) + func(array[element + 1])
+}

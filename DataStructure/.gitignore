@@ -1,0 +1,17 @@
+/build/
+.idea
+*.iml
+.gradle
+**/.gradle/**
+**/.idea/**
+**/.classpath/**
+*.classpath
+**/.project/**
+**/bin/**
+*.project
+*.perfs
+*.settings/
+**/.settings/
+**/env/**
+**/__pycache__/**
+
