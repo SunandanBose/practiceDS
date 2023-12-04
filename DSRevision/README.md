@@ -34,4 +34,6 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 27 | Container With Most Water | [Explanation](https://leetcode.com/problems/container-with-most-water/)| [Code](ContainerWithMostWater.java) | |
 28 | Minimum Size Subarray Sum | [Explanation](https://leetcode.com/problems/minimum-size-subarray-sum/)| [Code](MinimumSizeSubarraySum.java) | |
 29 | Min Stack | [Explanation](https://leetcode.com/problems/min-stack/)| [Code](MinStack.java) | |
+30 | Intersection of Two Linked Lists | [Explanation](https://leetcode.com/problems/intersection-of-two-linked-lists/)| [Code](IntersectionOfTwoLinkedLists.java) | |
+31 | Longest Substring Without Repeating Characters | [Explanation](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| [Code](LongestSubstringWithoutRepeatingCharacters.java) | |
 
