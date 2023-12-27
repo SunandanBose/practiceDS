@@ -36,4 +36,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 29 | Min Stack | [Explanation](https://leetcode.com/problems/min-stack/)| [Code](MinStack.java) | |
 30 | Intersection of Two Linked Lists | [Explanation](https://leetcode.com/problems/intersection-of-two-linked-lists/)| [Code](IntersectionOfTwoLinkedLists.java) | |
 31 | Longest Substring Without Repeating Characters | [Explanation](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| [Code](LongestSubstringWithoutRepeatingCharacters.java) | |
-
+32 | Surrounded Regions | [Explanation](https://leetcode.com/problems/surrounded-regions/)| [Code](SurroundedRegions.java) | |
