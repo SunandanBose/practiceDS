@@ -38,4 +38,5 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 31 | Longest Substring Without Repeating Characters | [Explanation](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| [Code](LongestSubstringWithoutRepeatingCharacters.java) | |
 32 | Surrounded Regions | [Explanation](https://leetcode.com/problems/surrounded-regions/)| [Code](SurroundedRegions.java) | |
 33 | Valid Soduko | [Explanation](https://leetcode.com/problems/valid-sudoku/)| [Code](ValidSoduko.java) | |
-33 | Three Sum | [Explanation](https://leetcode.com/problems/3sum/)| [Code](ThreeSum.java) | |
+34 | Three Sum | [Explanation](https://leetcode.com/problems/3sum/)| [Code](ThreeSum.java) | |
+35 | Minimum Path Sum | [Explanation](https://leetcode.com/problems/minimum-path-sum/)| [Code](MinimumPathSum.java) | |
