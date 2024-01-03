@@ -23,13 +23,14 @@ if [ -f "$readme_path" ]; then
     echo "Last line of $readme_path: $last_line: $number"
 fi
 
-filename=$(echo "$input2" | sed -e 's/[[:space:]]*$//')
+trimmed_string=$(echo "$input2" | sed 's/[[:space:]]*$//')
 
-# Replace blank spaces with noSpace
-filename=$(echo "$filename" | tr ' ' '')
+# Replace blank space between two words
+formatted_string=$(echo "$trimmed_string" | sed 's/ //g')
 
-# Ensure the filename ends with ".java"
-filename="${filename}.java"
+# Append ".java" at the end
+filename="${formatted_string}.java"
+
 
 today_date=$(date +"%d-%b-%y")
 
