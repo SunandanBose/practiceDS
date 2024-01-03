@@ -40,4 +40,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 33 | Valid Soduko | [Explanation](https://leetcode.com/problems/valid-sudoku/)| [Code](ValidSoduko.java) | |
 34 | Three Sum | [Explanation](https://leetcode.com/problems/3sum/)| [Code](ThreeSum.java) | |
 35 | Minimum Path Sum | [Explanation](https://leetcode.com/problems/minimum-path-sum/)| [Code](MinimumPathSum.java) | |
-36 | Coin Change | [Explanation](https://leetcode.com/problems/coin-change/) | [Code](.java) | |
+36 | Coin Change | [Explanation](https://leetcode.com/problems/coin-change/) | [Code](.java) | 03-Jan-24 |
