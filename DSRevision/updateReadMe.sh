@@ -2,10 +2,10 @@
 
 
 
-echo "Enter Input 2:"
+echo "Enter Problem Name:"
 read input2
 
-echo "Enter Input 3 (Explanation link):"
+echo "Enter Explanation link:"
 read input3
 
 # Specify the path to your Readme.md file
@@ -31,8 +31,10 @@ filename=$(echo "$filename" | tr ' ' '')
 # Ensure the filename ends with ".java"
 filename="${filename}.java"
 
+today_date=$(date +"%d-%b-%y")
+
 # Form the line to be added
-new_line="$number | $input2 | [Explanation]($input3) | [Code]($filename) | |"
+new_line="$number | $input2 | [Explanation]($input3) | [Code]($filename) | $today_date |"
 
 
 # Add the line to the Readme.md file
