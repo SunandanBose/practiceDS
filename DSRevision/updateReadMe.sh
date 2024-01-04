@@ -31,6 +31,8 @@ formatted_string=$(echo "$trimmed_string" | sed 's/ //g')
 # Append ".java" at the end
 filename="${formatted_string}.java"
 
+# create java file
+touch $filename
 
 today_date=$(date +"%d-%b-%y")
 
