@@ -41,3 +41,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 34 | Three Sum | [Explanation](https://leetcode.com/problems/3sum/)| [Code](ThreeSum.java) | |
 35 | Minimum Path Sum | [Explanation](https://leetcode.com/problems/minimum-path-sum/)| [Code](MinimumPathSum.java) | |
 36 | Coin Change | [Explanation](https://leetcode.com/problems/coin-change/) | [Code](CoinChange.java) | 03-Jan-24 |
+37 | Combination Sum | [Explanation](https://leetcode.com/problems/combination-sum/) | [Code](CombinationSum.java) | 04-Jan-24 |
