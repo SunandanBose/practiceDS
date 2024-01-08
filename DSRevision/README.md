@@ -44,3 +44,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 37 | Combination Sum | [Explanation](https://leetcode.com/problems/combination-sum/) | [Code](CombinationSum.java) | 04-Jan-24 |
 38 | Unique Paths | [Explanation](https://leetcode.com/problems/unique-paths/) | [Code](UniquePaths.java) | 05-Jan-24 |
 39 | Word Break | [Explanation](https://leetcode.com/problems/word-break/) | [Code](WordBreak.java) | 06-Jan-24 |
+40 | Maximum Subarray | [Explanation](https://leetcode.com/problems/maximum-subarray/) | [Code](MaximumSubarray.java) | 08-Jan-24 |
