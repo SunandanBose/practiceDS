@@ -45,3 +45,4 @@ Sl. No.| Problem Name                       | Description | Solution |Comment|
 38 | Unique Paths | [Explanation](https://leetcode.com/problems/unique-paths/) | [Code](UniquePaths.java) | 05-Jan-24 |
 39 | Word Break | [Explanation](https://leetcode.com/problems/word-break/) | [Code](WordBreak.java) | 06-Jan-24 |
 40 | Maximum Subarray | [Explanation](https://leetcode.com/problems/maximum-subarray/) | [Code](MaximumSubarray.java) | 08-Jan-24 |
+41 | Reverse Linked List II | [Explanation](https://leetcode.com/problems/reverse-linked-list-ii/) | [Code](ReverseLinkedListII.java) | 10-Jan-24 |
